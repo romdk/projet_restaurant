@@ -603,8 +603,8 @@ position: relative;
 
 
 .concerteImg{
-    width:500px ;
-    height: 400px;
+    width:450px ;
+    height: 300px;
     border-radius: 10px;
     transition: .4s;
     object-fit: cover;
@@ -625,7 +625,7 @@ position: relative;
 }
 
 .exEvenement{
-    width: 500px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -636,14 +636,14 @@ position: relative;
     top:0px;
     opacity: 0;
    
-  
+  s
 
 }
 
 .animEvenement{
     background-color: var(--clr-light);
     border-radius: 0 0 10px 10px;
-    transform: translateY(400px);
+    transform: translateY(300px);
     opacity: 1;
 }
 
