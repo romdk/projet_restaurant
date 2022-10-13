@@ -20,6 +20,7 @@ let width = image.width;
 
 console.log(width);
 
+
 // ------------------------------------ CARROUSEL GAUCHE -------------------------------------------------------
 
 // pos = position dans le carousel, au départ pos = 0
