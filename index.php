@@ -9,7 +9,7 @@
   $plat6 = "Grillade de réconfort enfin le Week end";
   $plat7 = "Poulet rôti à la broche et ses accompagnements";
   $platDuJour = ['Lundi' => $plat1,'Mardi' => $plat2 ,'Mercredi' => $plat3,'Jeudi' => $plat4,'Vendredi' => $plat5,'Samedi' => $plat6,'Dimanche' => $plat7];
-  
+
   $_SESSION['platDuJour'] = $platDuJour;
   ?>
 <!DOCTYPE html>
@@ -288,7 +288,7 @@
           </div>
          
           <div class ="nomPrenom">
-              <select name="menu deroellant">
+              <select name="menu deroulant">
                   <option selected="yes">lundi</option>
                   <option >mardi</option>
                   <option>mercredi</option>
@@ -298,33 +298,33 @@
                   <option>dimanche</option>
               </select>
        
-              <select name="menu deroellant">
+              <select name="menu deroulant" id="heure">
                   <option selected="yes">midi</option>
                   <option >soir</option>
               </select>
 
-              <select name="menu deroellant">
-              <div class="midi hidden">
+              <select name="menu deroulant" id="horaires">
+              <div id="midi">
                   <option selected="yes">12h</option>
-                  <option >12h15</option>
-                  <option>12h30</option>
-                  <option>12h45</option>
-                  <option>13h</option>
-                  <option>13h15</option>
-                  <option>13h30</option>
-                  <option>13h45</option>
-                  <option>14h</option>
+                  <option class="midi" >12h15</option>
+                  <option class="midi">12h30</option>
+                  <option class="midi">12h45</option>
+                  <option class="midi">13h</option>
+                  <option class="midi">13h15</option>
+                  <option class="midi">13h30</option>
+                  <option class="midi">13h45</option>
+                  <option class="midi">14h</option>
               </div>
-              <div class = "soir">
+              <div id="soir">
                   <option selected="yes">12h</option>
-                  <option class="hidden">12h15</option>
-                  <option class="hidden">12h30</option>
-                  <option class="hidden">12h45</option>
-                  <option class="hidden">13h</option>
-                  <option class="hidden">13h15</option>
-                  <option class="hidden">13h30</option>
-                  <option class="hidden">13h45</option>
-                  <option class="hidden">14h</option>
+                  <option class="soir hidden">12h15</option>
+                  <option class="soir hidden">12h30</option>
+                  <option class="soir hidden">12h45</option>
+                  <option class="soir hidden">13h</option>
+                  <option class="soir hidden">13h15</option>
+                  <option class="soir hidden">13h30</option>
+                  <option class="soir hidden">13h45</option>
+                  <option class="soir hidden">14h</option>
               </div>
           </select>
           </div>
@@ -401,6 +401,7 @@
     <script src="./js/evenement.js"></script>
     <script src="./js/burger.js"></script>
     <script src="./js/darkmode.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
 
