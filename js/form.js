@@ -1,25 +1,22 @@
-const heure = document.querySelectorAll('#heure option');
-const midi = document.querySelectorAll('#midi option');
-const soir = document.querySelectorAll('#soir option');
+
+const heureBtn = document.querySelector('#heure');
+const midi = document.querySelectorAll('.midi');
+const soir = document.querySelectorAll('.soir');
+const horaires = document.querySelector('#horaires')
 
 
-midi.forEach((option) => {
-    if (heure == 1){
-        option.classList.add('hidden');
-        console.log("test1");
-        
-    }
-    else option.classList.remove('hidden')
+
+
+console.log(heureBtn);
+heureBtn.addEventListener("change", () => {
+    console.log('test');
+    
+    midi.classList.toggle('hidden');
+    soir.classList.toggle('hidden');
 });
 
-soir.forEach((option) => {
-    if (heure == 0){
-        option.classList.add('hidden');
-        console.log("test2");
-    }
-    else option.classList.remove('hidden')
-});
+ 
 
-console.log(heure);
+console.log(heureBtn);
 console.log(midi);
 console.log(soir);
