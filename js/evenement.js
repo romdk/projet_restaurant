@@ -7,7 +7,7 @@
 
 
 // const affichageText = function number () { 
-//   console.log(this.id);
+//   
 //   for(let i = 0 ; i<tableauDetail.length ; i++){
 //        tableauDetail[i].style.visibility ="visible" ;
 //        tableauDetail[i].style.transform= "translateY(0px)" ;
@@ -39,8 +39,6 @@
 
 
 cards = document.querySelectorAll('.evenvement');
-
-console.log(cards);
 
 function myFunction(card) {
   card.addEventListener("click", function () {

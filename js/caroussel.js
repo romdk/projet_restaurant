@@ -18,22 +18,21 @@ const image = document.querySelector("#galerie img");
 
 let width = image.width;
 
-console.log(width);
 
 
 // ------------------------------------ CARROUSEL GAUCHE -------------------------------------------------------
 
 // pos = position dans le carousel, au départ pos = 0
 let gauchePos = 0;
-console.log(gauchePos);
+
 
 // à chaque click du bouton droite, execute la fonction
 
 carrouselGauchebtnDroite.onclick = function () {
-  console.log(width);
+
   // incrémente la position de 1
   gauchePos++;
-  console.log(gauchePos);
+
   // si la position dans le caroussel est <= à 4 (4e image)
   if (gauchePos <= 4) {
     // ajoute une translation de l'axe X en fonction de la position dans le carrousel
@@ -51,9 +50,9 @@ carrouselGauchebtnDroite.onclick = function () {
 };
 // même fonction pour le bouton gauche, juste la condition de départ qui change
 carrouselGauchebtnGauche.onclick = function () {
-  console.log(width);
+
   gauchePos--;
-  console.log(gauchePos);
+
 
   if (gauchePos >= 0) {
     carrouselGaucheImg.style.transform =
@@ -72,12 +71,12 @@ carrouselGauchebtnGauche.onclick = function () {
 // -------------------------------------CARROUSEL DROITE-------------------------------------------------
 
 let droitePos = 0;
-console.log(droitePos);
+
 
 carrouselDroitebtnDroite.onclick = function () {
-  console.log(width);
+
   droitePos++;
-  console.log(droitePos);
+
   if (droitePos <= 4) {
     carrouselDroiteImg.style.transform =
       "translateX(" + droitePos * -width + "px)";
@@ -93,9 +92,8 @@ carrouselDroitebtnDroite.onclick = function () {
 };
 
 carrouselDroitebtnGauche.onclick = function () {
-  console.log(width);
+
   droitePos--;
-  console.log(droitePos);
 
   if (droitePos >= 0) {
     carrouselDroiteImg.style.transform =

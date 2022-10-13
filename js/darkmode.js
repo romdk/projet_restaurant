@@ -2,7 +2,6 @@ const btnToggle = document.querySelector(".btn-toggle");
 const body=document.querySelector("body");
 
 btnToggle.addEventListener("click",( ) => {
-    console.log("test");
 
     if(body.classList.contains("dark")){
         body.classList.add("light")
