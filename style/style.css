@@ -181,7 +181,7 @@ section{
 }
 .video{
     top: 0px;
-    width: 100;
+    width: 100%;
     position: fixed;
     z-index: -999;
 }
@@ -197,7 +197,7 @@ section{
 }
 #accueil img {
     top: 200px;
-    height: 500px;
+    height: 50%;
     position: absolute;
     position: fixed;
     z-index: -999;
@@ -992,7 +992,7 @@ background-color: var(--clr-accent);
 
         .video{
             /* height: 100vh; */
-            width: 100vw;
+        width: auto;
         }
     
 
@@ -1257,7 +1257,6 @@ background-color: var(--clr-accent);
 
     #accueil img {
         top: 30%;
-        height: 300px;
         position: absolute;
         position: fixed;
         z-index: -999;
