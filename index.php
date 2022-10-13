@@ -1,3 +1,17 @@
+<?php
+  session_start();
+
+  $plat1 = "Escalope de poisson pané avec ses pommes de terre sauté";
+  $plat2 = "Quiche de saison accompagnée de sa salade";
+  $plat3 = "Spaghetti bolognaise et sa salade de saison";
+  $plat4 = "Pizza aux 2 options";
+  $plat5 = "Le risotto qui réchauffe le coeur";
+  $plat6 = "Grillade de réconfort enfin le Week end";
+  $plat7 = "Poulet rôti à la broche et ses accompagnements";
+  $platDuJour = ['Lundi' => $plat1,'Mardi' => $plat2 ,'Mercredi' => $plat3,'Jeudi' => $plat4,'Vendredi' => $plat5,'Samedi' => $plat6,'Dimanche' => $plat7];
+  
+  $_SESSION['platDuJour'] = $platDuJour;
+  ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -114,7 +128,7 @@
               <label class="box-title" for="cb1">Lundi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-                <p>Escalope de poisson pané avec ses pommes de terre sauté</p>
+                <p><?php echo $plat1 ?></p>
                 <img
                   src="./images/platDuJourFish.png"
                   alt="Une assiette d'escalope de poisson pané avec ses pommes de terre sauté. Ainsi que ses lardons et ces compos de ciboulette accompagnée d'une sauce ketchup."
@@ -126,7 +140,7 @@
               <label class="box-title" for="cb2">Mardi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-                <p>Quiche de saison accompagnée de sa salade</p>
+              <p><?php echo $plat2 ?></p>
                 <img
                   src="./images/platDuJourQuiche.png"
                   alt="Photo d'une quiche de saison sur son assiette blanche"
@@ -138,7 +152,7 @@
               <label class="box-title" for="cb3">Mercredi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-                <p>Spaghetti bolognaise et sa salade de saison</p>
+              <p><?php echo $plat3 ?></p>
                 <img
                   src="./images/platDuJourBolo.png"
                   alt="Assiette de spaghetti bolognaise"
@@ -150,7 +164,7 @@
               <label class="box-title" for="cb4">Jeudi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-                <p>Pizza aux 2 options</p>
+              <p><?php echo $plat4 ?></p>
                 <img
                   src="./images/platDuJourPizza.png"
                   alt="Pizza sur sa plache de bois"
@@ -162,7 +176,7 @@
               <label class="box-title" for="cb5">Vendredi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-                <p>Le risotto qui réchauffe le coeur</p>
+              <p><?php echo $plat5 ?></p>
                 <img
                   src="./images/PlatDuJourRissoto.png"
                   alt="Assiette de rissoto"
@@ -174,7 +188,7 @@
               <label class="box-title" for="cb6">Samedi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-                <p>Grillade de réconfort enfin le Week end</p>
+              <p><?php echo $plat6 ?></p>
                 <img
                   src="./images/platDuJourGrillade.jpg"
                   alt="Grillade de viande au barbecue"
@@ -186,7 +200,7 @@
               <label class="box-title" for="cb7">Dimanche</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-                <p>Poulet rôti à la broche et ses accompagnements</p>
+              <p><?php echo $plat7 ?></p>
                 <img
                   src="./images/platDuJourPoulet.png"
                   alt="Poulet rôti à la broche et ses accompagnements"
@@ -339,3 +353,7 @@
     <script src="./js/darkmode.js"></script>
   </body>
 </html>
+
+<?php
+
+?>
