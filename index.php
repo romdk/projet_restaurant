@@ -257,18 +257,64 @@
       </section>
 
       <!------------------------------------------------CONTACT------------------------------------------->
-      <section id="contact">
+      
+      <section id="contact">*
+        
+        <?php
+
+        echo'
         <form>
           <h3>Contactez-nous</h3>
           <div class="nomPrenom">
             <span><i class="fa-solid fa-user"></i></span>
-            <input id="nom" type="text" placeholder="Entrez votre nom" />
-            <input
-              id="prenom"
-              type="text"
-              placeholder="Entrez votre prénom"
-            /><br />
+            <input id="nom" type="text" placeholder="Entrez votre nom et prenom" />
+            <!-- <input id="prenom" type="text" placeholder="Entrez votre prénom"/><br /> -->
+            <input type="number" id="tentacles" name="NB des personnes" placeholder="NB des personnes" min="1" max="200"> 
+       
           </div>
+         
+          <div class ="nomPrenom">
+              <select name="menu deroellant">
+                  <option selected="yes">lundi</option>
+                  <option >mardi</option>
+                  <option>mercredi</option>
+                  <option>jeudi</option>
+                  <option>vendredi</option>
+                  <option>samedi</option>
+                  <option>dimanche</option>
+              </select>
+       
+              <select name="menu deroellant">
+                  <option selected="yes">midi</option>
+                  <option >soir</option>
+              </select>
+
+              <select name="menu deroellant">
+              <div class="midi hidden">
+                  <option selected="yes">12h</option>
+                  <option >12h15</option>
+                  <option>12h30</option>
+                  <option>12h45</option>
+                  <option>13h</option>
+                  <option>13h15</option>
+                  <option>13h30</option>
+                  <option>13h45</option>
+                  <option>14h</option>
+              </div>
+              <div class = "soir">
+                  <option selected="yes">12h</option>
+                  <option class="hidden">12h15</option>
+                  <option class="hidden">12h30</option>
+                  <option class="hidden">12h45</option>
+                  <option class="hidden">13h</option>
+                  <option class="hidden">13h15</option>
+                  <option class="hidden">13h30</option>
+                  <option class="hidden">13h45</option>
+                  <option class="hidden">14h</option>
+              </div>
+          </select>
+          </div>
+         
           <div class="email">
             <span><i class="fa-solid fa-envelope"></i></span>
             <input
@@ -288,7 +334,11 @@
           <div class="envoyer">
             <input type="submit" value="Envoyer" />
           </div>
-        </form>
+        </form>';
+
+        ?>
+
+
         <div class="map">
           <h3>Trouvez-nous</h3>
           <iframe

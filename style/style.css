@@ -704,6 +704,7 @@ position: relative;
 }
 
 #contact form .nomPrenom{
+  
     margin-top: 20px;
     padding-left: 20px;
     display: flex;
@@ -780,6 +781,7 @@ position: relative;
     
 }
 
+
 #contact .envoyer{
     width: 100%;
     display: flex;
@@ -825,6 +827,11 @@ position: relative;
 
 #contact .envoyer input:hover{
     background-color:var(--clr-accent2);
+}
+
+
+.hidden{
+    display: none;
 }
 /* ----------------------------------FOOTER---------------------------------------- */
 
