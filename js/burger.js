@@ -11,3 +11,4 @@ burger.addEventListener("click", () => {
   icone2.classList.toggle("burgerAnimIcon2");
   icone3.classList.toggle("burgerAnimIcon3");
 });
+

@@ -24,7 +24,7 @@
     --clr-texte2: #dddddd;
     --clr-texte3: #000000;
 
-    --clr-accent: #2ce893;
+    --clr-accent: blue ;  
     --clr-accent2: #19003f;
 }
 
@@ -603,8 +603,8 @@ position: relative;
 
 
 .concerteImg{
-    width:500px ;
-    height: 400px;
+    width:450px ;
+    height: 300px;
     border-radius: 10px;
     transition: .4s;
     object-fit: cover;
@@ -625,7 +625,7 @@ position: relative;
 }
 
 .exEvenement{
-    width: 500px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -635,15 +635,13 @@ position: relative;
     position: absolute;
     top:0px;
     opacity: 0;
-   
-  
 
 }
 
 .animEvenement{
     background-color: var(--clr-light);
     border-radius: 0 0 10px 10px;
-    transform: translateY(400px);
+    transform: translateY(300px);
     opacity: 1;
 }
 
@@ -963,6 +961,9 @@ background-color: var(--clr-accent);
             margin-right: 50px;
             width: auto;
             gap: 0px;
+          
+           
+            
         }
 
         #top li:nth-child(1).active ~ .indicateur{ 
@@ -1327,9 +1328,8 @@ background-color: var(--clr-accent);
     }
 
     /* -----------------------------------------EVENEMENTS---------------------------------------------- */
-
+   
     
-
     /* ---------------------------------------------------CONTACT-------------------------------------------------------- */
 
     #contact{

@@ -19,6 +19,7 @@ btnToggle.addEventListener("click",( ) => {
 
 
 
+
 /* icon soleil
 
 <i class="fa-solid fa-sun-bright"></i>

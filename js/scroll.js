@@ -6,6 +6,7 @@ const logo = document.querySelector("#top img");
 const down = document.querySelector("#accueil .down");
 const fleche = document.querySelector(".back-to-top");
 
+
 // on recupere la valeur du scroll sur notre container
 container.addEventListener("scroll", () => {
   // --------------------ANIMATION DES ELEMENTS DANS LA BARRE TOP---------------------------------

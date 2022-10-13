@@ -5,6 +5,7 @@
 
 
 
+
 // const affichageText = function number () { 
 //   console.log(this.id);
 //   for(let i = 0 ; i<tableauDetail.length ; i++){
