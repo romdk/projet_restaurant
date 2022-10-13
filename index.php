@@ -42,6 +42,7 @@
             <li class="plat"><a href="#plat">NOTRE MENU</a></li>
             <li class="evenements"><a href="#evenements">EVENEMENTS</a></li>
             <li class="contact"><a href="#contact">CONTACT</a></li>
+            <li class="panier"><a href="panier.php">panier</a></li>
             <div class="indicateur"></div>
           </ul>
           <div class="burger">
@@ -272,23 +273,24 @@
 
       <!------------------------------------------------CONTACT------------------------------------------->
       
-      <section id="contact">*
+      <section id="contact">
         
-        <?php
+        
 
-        echo'
-        <form>
+       <?php
+       echo'
+        <form action="traitement.php?action=ajouterReservation" method="post">
           <h3>Contactez-nous</h3>
           <div class="nomPrenom">
             <span><i class="fa-solid fa-user"></i></span>
-            <input id="nom" type="text" placeholder="Entrez votre nom et prenom" />
+            <input id="nom" type="text" name="name" placeholder="Entrez votre nom et prenom" />
             <!-- <input id="prenom" type="text" placeholder="Entrez votre prénom"/><br /> -->
-            <input type="number" id="tentacles" name="NB des personnes" placeholder="NB des personnes" min="1" max="200"> 
+            <input type="number" id="tentacles" name="nbPersonne" placeholder="NB des personnes" min="1" max="200"> 
        
           </div>
          
           <div class ="nomPrenom">
-              <select name="menu deroulant">
+              <select name="jour">
                   <option selected="yes">lundi</option>
                   <option >mardi</option>
                   <option>mercredi</option>
@@ -298,12 +300,12 @@
                   <option>dimanche</option>
               </select>
        
-              <select name="menu deroulant" id="heure">
+              <select name="heure" id="heure">
                   <option selected="yes">midi</option>
                   <option >soir</option>
               </select>
 
-              <select name="menu deroulant" id="horaires">
+              <select name="creneau" id="horaires">
               <div id="midi">
                   <option selected="yes">12h</option>
                   <option class="midi" >12h15</option>
@@ -333,20 +335,20 @@
             <span><i class="fa-solid fa-envelope"></i></span>
             <input
               id="email"
-              type="text"
+              type="text" name="email"
               placeholder="Entrez votre email"
             /><br />
           </div>
           <div class="message">
             <i class="fa-solid fa-message"></i>
             <textarea
-              id="message"
+              id="message" name="message"
               placeholder="Entrez votre message"
             ></textarea>
             <br />
           </div>
           <div class="envoyer">
-            <input type="submit" value="Envoyer" />
+            <input type="submit" name="envoyer" value="Envoyer" />
           </div>
         </form>';
 
@@ -404,6 +406,7 @@
     <script src="./js/form.js"></script>
   </body>
 </html>
+
 
 <?php
 
