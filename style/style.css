@@ -24,7 +24,7 @@
     --clr-texte2: #dddddd;
     --clr-texte3: #000000;
 
-    --clr-accent: red ; 
+    --clr-accent: blue ; 
     --clr-accent2: #19003f;
 }
 
@@ -963,6 +963,8 @@ background-color: var(--clr-accent);
             margin-right: 50px;
             width: auto;
             gap: 0px;
+          
+           
             
         }
 
