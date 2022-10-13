@@ -13,7 +13,7 @@
 :root{
 
     /* couleurs encore à déterminer */
-    --clr-light: #f1f1f1;
+    --clr-light: #27ba69;
     --clr-dark: #ececec;
     --clr-nav: #18181f;
     --clr-card : #ffffff;
@@ -24,7 +24,7 @@
     --clr-texte2: #dddddd;
     --clr-texte3: #000000;
 
-    --clr-accent: #772ce8;
+    --clr-accent: yellow;
     --clr-accent2: #19003f;
 }
 
