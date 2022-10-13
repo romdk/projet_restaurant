@@ -25,7 +25,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/style_index.css" />
     <title>Le quai des machines</title>
     <link rel="shortcut icon" href="./images/logo.png" />
   </head>
