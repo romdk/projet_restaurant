@@ -24,7 +24,7 @@
     --clr-texte2: #dddddd;
     --clr-texte3: #000000;
 
-    --clr-accent: #772ce8;
+    --clr-accent: red ; 
     --clr-accent2: #19003f;
 }
 
@@ -963,6 +963,7 @@ background-color: var(--clr-accent);
             margin-right: 50px;
             width: auto;
             gap: 0px;
+            
         }
 
         #top li:nth-child(1).active ~ .indicateur{ 
@@ -983,8 +984,8 @@ background-color: var(--clr-accent);
         }
 
         .video{
-            height: 100vh;
-            width: 100%;
+            /* height: 100vh; */
+            width: 100vw;
         }
     
 
@@ -1328,9 +1329,8 @@ background-color: var(--clr-accent);
     }
 
     /* -----------------------------------------EVENEMENTS---------------------------------------------- */
-
+   
     
-
     /* ---------------------------------------------------CONTACT-------------------------------------------------------- */
 
     #contact{
