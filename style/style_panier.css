@@ -35,6 +35,10 @@ table td {
     transform: translateY(10px);
     border-bottom: solid black 10px;
 }
+
+table td:nth-child(9){
+    text-align: center;
+}
 .fa-minus, .fa-plus{
     padding: 0 5px;
     color: black;
@@ -44,6 +48,22 @@ table td {
     font-size: 1.5rem;
     color: rgb(201, 21, 21);
     padding: 0 20px;
+}
+
+th a{
+    display: block;
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    height: 30px;
+    background-color: rgb(190, 46, 46);
+    color: white;
+    border-radius: 20px;
+    transition: .4s;
+}
+
+th a:hover{
+    background-color: rgb(161, 15, 15);
 }
 
 

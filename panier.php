@@ -58,10 +58,7 @@ session_start() ;
                             "<th>créneau</th>",
                             "<th>email</th>",
                             "<th>message</th>",
-                            "<th>"."<a class='button1' href=traitement.php?action=effacerReservations&index=$index>efface panier</a>"."</th>",
-                            
-
-                            
+                            "<th>"."<a class='button1' href=traitement.php?action=effacerReservations>Effacer reservations</a>"."</th>", 
                           "</tr>",
                         "</thead>",
                         "<tbody>";
