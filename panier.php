@@ -40,6 +40,7 @@ session_start() ;
                 echo "<table>", 
                         "<thead>",
                           "<tr>",
+                          /* Titre des colonnes */
                             "<th>Numero reservation</th>",
                             "<th>Nom et prenom</th>",
                             "<th>nombre de personnes </th>",

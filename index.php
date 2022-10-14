@@ -42,7 +42,7 @@
             <li class="plat"><a href="#plat">NOTRE MENU</a></li>
             <li class="evenements"><a href="#evenements">EVENEMENTS</a></li>
             <li class="contact"><a href="#contact">CONTACT</a></li>
-            <li class="panier"><a href="panier.php">panier</a></li>
+            <li class="panier"><a href="panier.php">PANIER</a></li>
             <div class="indicateur"></div>
           </ul>
           <div class="burger">
