@@ -32,12 +32,9 @@ session_start() ;
             
             <div class="indicateur"></div>
           </ul>
-          <div class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
         </section>
+
+        <!-------------------------------------MAIN------------------------------------------->
         <section id="main">
           <?php 
          
@@ -58,11 +55,13 @@ session_start() ;
                             "<th>créneau</th>",
                             "<th>email</th>",
                             "<th>message</th>",
-                            "<th>"."<a class='button1' href=traitement.php?action=effacerReservations>Effacer reservations</a>"."</th>", 
+                            "<th></th>",
+                            "<th>"."<a class='bouton1' href=traitement.php?action=effacerReservations>Effacer reservations</a>"."</th>", 
                           "</tr>",
                         "</thead>",
                         "<tbody>";
                           foreach($_SESSION['reservations'] as $index => $reservation){
+                            $jour = $reservation['jour'];
                             echo "<tr>",
                                     "<td>".$index."</td>",
                                     "<td>".$reservation['name']."</td>",
@@ -72,14 +71,20 @@ session_start() ;
                                     "<td>".$reservation['creneau']."</td>",
                                     "<td>".$reservation['email']."</td>",
                                     "<td>".$reservation['message']."</td>",
-                                    "<td>"."<a class='button1' href=traitement.php?action=supprimerUneReservation&index=$index><i class='fa-solid fa-xmark'></i></a>"."</td>",
-                                  "</tr>";         
+                                    "<td>
+                                      <button class='bouton2'> Afficher menu<p class='plat'>".$_SESSION['platDuJour'][$jour]."</p></button>",
+                                      "</td>",
+                                    "<td>"."<a href=traitement.php?action=supprimerUneReservation&index=$index><i class='fa-solid fa-xmark'></i></a>"."</td>",
+                                  "</tr>";    
+                                }
                           }
                         "</tbody>";
                       "</table>";
-              }
+              
             ?>
         </section>
+
+        <script src="./js/afficherMenu.js"></script>
   </body>
 </html>
 
