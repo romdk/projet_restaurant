@@ -833,6 +833,11 @@ position: relative;
 .hidden{
     display: none;
 }
+/*---------- réservation: jour, heure, créneau ----------*/
+.nomPrenom{
+    display: flex;
+    justify-content:space-around;
+}
 /* ----------------------------------FOOTER---------------------------------------- */
 
 footer{
