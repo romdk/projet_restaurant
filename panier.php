@@ -29,7 +29,7 @@ session_start() ;
           <ul class="nav">
             <li class="header"><a href="#accueil">PANIER</a></li>
             <li class="header"><a href="index.php">RETOUR</a></li>
-            <li class="header"><a href='traitement.php?action=effacerReservations'>EFFACER</a></li>
+            
             <div class="indicateur"></div>
           </ul>
           <div class="burger">
