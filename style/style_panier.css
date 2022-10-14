@@ -50,7 +50,7 @@ table td:nth-child(9){
     padding: 0 20px;
 }
 
-th a{
+.bouton1{
     display: block;
     text-align: center;
     padding: 5px;
@@ -61,8 +61,46 @@ th a{
     border-radius: 20px;
     transition: .4s;
 }
+.bouton2{
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(46, 190, 130);
+    color: white;
+    border-radius: 20px;
+    transition: .4s;
+    border: none;
+    overflow: hidden;
+}
 
-th a:hover{
+.bouton2 p{
+    color:black;
+    text-align: left;
+    /* display: none; */
+    position: absolute;
+    font-size: 1rem;
+    padding: 30px;
+    top: 0px;       
+}
+
+.bouton2:hover{
+    cursor: pointer;
+}
+
+.bouton2active{
+    color: transparent;
+    background-color: #f1f1f1;
+    width: 300px;
+    height: 100px;
+}
+.bouton2activeP{
+display: block;
+}
+
+.bouton1:hover{
     background-color: rgb(161, 15, 15);
 }
 
