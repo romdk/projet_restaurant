@@ -8,7 +8,7 @@
   $plat5 = "Le risotto qui réchauffe le coeur";
   $plat6 = "Grillade de réconfort enfin le Week end";
   $plat7 = "Poulet rôti à la broche et ses accompagnements";
-  $platDuJour = ['Lundi' => $plat1,'Mardi' => $plat2 ,'Mercredi' => $plat3,'Jeudi' => $plat4,'Vendredi' => $plat5,'Samedi' => $plat6,'Dimanche' => $plat7];
+  $platDuJour = ['lundi' => $plat1,'mardi' => $plat2 ,'mercredi' => $plat3,'jeudi' => $plat4,'vendredi' => $plat5,'samedi' => $plat6,'dimanche' => $plat7];
 
   $_SESSION['platDuJour'] = $platDuJour;
   ?>
