@@ -228,7 +228,7 @@
             <img
               class="concerteImg"
               id="1"
-              src="/images/restaurant-concert-1.jpg"
+              src="./images/restaurant-concert-1.jpg"
               alt=""
             />
             <div class="exEvenement">
@@ -245,7 +245,7 @@
             <img
               class="concerteImg"
               id="2"
-              src="/images/exposition.jpg"
+              src="./images/exposition.jpg"
               alt=""
             />
             <div class="exEvenement">
@@ -260,7 +260,7 @@
             </div>
           </div>
           <div class="evenvement">
-            <img class="concerteImg" id="3" src="/images/jeu.png" alt="" />
+            <img class="concerteImg" id="3" src="./images/jeu.png" alt="" />
             <div class="exEvenement">
               <span class="text">Memphis Special</span>
               <span class="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quam et enim dolorum delectus quis ducimus quos odit nemo ex.</span>
