@@ -22,7 +22,7 @@ session_start() ;
           <ul class="nav">
             <li class="header"><a href="#accueil">PANIER</a></li>
             <li class="header"><a href="index.php">RETOUR</a></li>
-            <li class="header"><a href='traitement.php?action=effacerReservations'>EFFACER</a></li>
+            
             <div class="indicateur"></div>
           </ul>
           <div class="burger">
@@ -51,6 +51,8 @@ session_start() ;
                             "<th>créneau</th>",
                             "<th>email</th>",
                             "<th>message</th>",
+                            "<th>"."<a class='button1' href=traitement.php?action=effacerReservations&index=$index>efface panier</a>"."</th>",
+                            
                           "</tr>",
                         "</thead>",
                         "<tbody>";
