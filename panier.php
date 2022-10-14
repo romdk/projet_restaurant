@@ -9,6 +9,13 @@ session_start() ;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style/style_panier.css" />
     <title>Reservation</title>
   </head>
@@ -22,7 +29,7 @@ session_start() ;
           <ul class="nav">
             <li class="header"><a href="#accueil">PANIER</a></li>
             <li class="header"><a href="index.php">RETOUR</a></li>
-            <li class="header"><a href='traitement.php?action=effacerReservations'>EFFACER</a></li>
+            
             <div class="indicateur"></div>
           </ul>
           <div class="burger">
@@ -51,6 +58,7 @@ session_start() ;
                             "<th>créneau</th>",
                             "<th>email</th>",
                             "<th>message</th>",
+                            "<th></th>",
                           "</tr>",
                         "</thead>",
                         "<tbody>";
@@ -58,13 +66,13 @@ session_start() ;
                             echo "<tr>",
                                     "<td>".$index."</td>",
                                     "<td>".$reservation['name']."</td>",
-                                    "<td><a href='traitement.php?action=downNbPersonne&id=$index'>-</a>".$reservation['nbPersonne']."<a href='traitement.php?action=upNbPersonne&id=$index'>+</a></td>",
+                                    "<td><a href='traitement.php?action=downNbPersonne&id=$index'><i class='fa-solid fa-minus'></i></a>".$reservation['nbPersonne']."<a href='traitement.php?action=upNbPersonne&id=$index'><i class='fa-solid fa-plus'></i></a></td>",
                                     "<td>".$reservation['jour']."</td>",
                                     "<td>".$reservation['heure']."</td>",
                                     "<td>".$reservation['creneau']."</td>",
                                     "<td>".$reservation['email']."</td>",
                                     "<td>".$reservation['message']."</td>",
-                                    "<td>"."<a class='button1' href=traitement.php?action=supprimerUneReservation&index=$index>Supprime une reservation</a>"."</td>",
+                                    "<td>"."<a class='button1' href=traitement.php?action=supprimerUneReservation&index=$index><i class='fa-solid fa-xmark'></i></a>"."</td>",
                                   "</tr>";         
                           }
                         "</tbody>";

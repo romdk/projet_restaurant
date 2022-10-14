@@ -44,8 +44,8 @@ switch($action) {
     break;
 
     case "effacerReservations";
-    unset($_SESSION['reservations']);
-    header("Location:panier.php");
+        unset($_SESSION['reservations']);
+        header("Location:panier.php");
     break;
 
     case "supprimerUneReservation":
