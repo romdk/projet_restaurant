@@ -30,7 +30,7 @@ switch($action) {
 
         $_SESSION['reservations'][]=$reservation;
         }
-        header("Location:panier.php");
+        header("Location:index.php");
         
 
     }
