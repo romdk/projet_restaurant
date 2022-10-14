@@ -33,6 +33,8 @@ session_start() ;
         </section>
         <section id="main">
           <?php 
+         
+          
             if(!isset($_SESSION['reservations'])|| empty($_SESSION['reservations'])){
                 echo '<p> aucune reservation </p>';
             }
@@ -60,8 +62,9 @@ session_start() ;
                                     "<td>".$reservation['heure']."</td>",
                                     "<td>".$reservation['creneau']."</td>",
                                     "<td>".$reservation['email']."</td>",
-                                    "<td>".$reservation['message']."</td>
-                                  </tr>";         
+                                    "<td>".$reservation['message']."</td>",
+                                    "<td>"."<a class='button1' href=traitement.php?action=supprimerUneReservation&index=$index>Supprime une reservation</a>"."</td>",
+                                  "</tr>";         
                           }
                         "</tbody>";
                       "</table>";
