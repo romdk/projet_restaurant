@@ -4,7 +4,7 @@ session_start() ;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,6 +52,8 @@ session_start() ;
                             "<th>email</th>",
                             "<th>message</th>",
                             "<th>"."<a class='button1' href=traitement.php?action=effacerReservations&index=$index>efface panier</a>"."</th>",
+                            
+
                             
                           "</tr>",
                         "</thead>",

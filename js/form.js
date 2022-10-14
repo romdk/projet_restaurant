@@ -5,7 +5,8 @@ const soir = document.querySelectorAll('.soir');
 const horaires = document.querySelector('#horaires')
 
 
-
+// Modification des horaires possible tous dépend du choix Midi / Soir
+// Horaire du Midi par défault
 
 console.log(heureBtn);
 heureBtn.addEventListener("change", () => {
