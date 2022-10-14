@@ -49,6 +49,7 @@ switch($action) {
     case "supprimerUneReservation":
         unset($_SESSION["reservations"][$index]);
         header("Location:panier.php");
+ 
      break;
 }
 
