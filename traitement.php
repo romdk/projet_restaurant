@@ -2,6 +2,7 @@
 
 session_start() ;
 $action = $_GET["action"];
+$index = (isset($_GET["index"])) ? $_GET["index"] : "";
 
 switch($action) {
 
@@ -16,6 +17,11 @@ switch($action) {
         $creneau = $_POST['creneau'];
         $message = $_POST['message'];
         $email = $_POST['email'];
+
+        // $name =filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING);
+        // $nbPersonne =filter_input(INPUT_POST,"nbpersonne",FILTER_VALIDATE_INT,FILTER_FLAG_ALLOW_FRACTION);
+        // $message =filter_input(INPUT_POST,"message",FILTER_SANITIZE_STRING);
+        // $email=filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 
         if($name && $nbPersonne && $jour && $heure && $creneau && $email ){
             $reservation =[
@@ -39,6 +45,12 @@ switch($action) {
     unset($_SESSION['reservations']);
     header("Location:panier.php");
     break;
+
+    case "supprimerUneReservation":
+        unset($_SESSION["reservations"][$index]);
+        header("Location:panier.php");
+ 
+     break;
 }
 
 ?>

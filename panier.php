@@ -33,6 +33,8 @@ session_start() ;
         </section>
         <section id="main">
           <?php 
+         
+          
             if(!isset($_SESSION['reservations'])|| empty($_SESSION['reservations'])){
                 echo '<p> aucune reservation </p>';
             }
@@ -42,7 +44,7 @@ session_start() ;
                           "<tr>",
                           /* Titre des colonnes */
                             "<th>Numero reservation</th>",
-                            "<th>Nom et prenom</th>",
+                            "<th>Nom et prénom</th>",
                             "<th>nombre de personnes </th>",
                             "<th>jour</th>",
                             "<th>heure</th>",
@@ -56,13 +58,14 @@ session_start() ;
                             echo "<tr>",
                                     "<td>".$index."</td>",
                                     "<td>".$reservation['name']."</td>",
-                                    "<td>".$reservation['nbPersonne']."</td>",
+                                    "<td><a href='traitement.php?action=downNbPersonne&id=$index'>-</a>".$reservation['nbPersonne']."<a href='traitement.php?action=upNbPersonne&id=$index'>+</a></td>",
                                     "<td>".$reservation['jour']."</td>",
                                     "<td>".$reservation['heure']."</td>",
                                     "<td>".$reservation['creneau']."</td>",
                                     "<td>".$reservation['email']."</td>",
-                                    "<td>".$reservation['message']."</td>
-                                  </tr>";         
+                                    "<td>".$reservation['message']."</td>",
+                                    "<td>"."<a class='button1' href=traitement.php?action=supprimerUneReservation&index=$index>Supprime une reservation</a>"."</td>",
+                                  "</tr>";         
                           }
                         "</tbody>";
                       "</table>";
