@@ -277,8 +277,7 @@
         
         
 
-       <?php
-       echo'
+       
         <form action="traitement.php?action=ajouterReservation" method="post">
           <h3>Contactez-nous</h3>
           <div class="nomPrenom">
@@ -291,7 +290,7 @@
          
           <div class ="nomPrenom">
               <select name="jour">
-                  <option selected="yes">lundi</option>
+                  <option selected="selected">lundi</option>
                   <option >mardi</option>
                   <option>mercredi</option>
                   <option>jeudi</option>
@@ -300,36 +299,39 @@
                   <option>dimanche</option>
               </select>
        
-              <select name="heure" id="heure">
-                  <option selected="yes">midi</option>
-                  <option >soir</option>
+              <select name="heure" id="heure" onchange="toggleCreneaux()">
+                  <option id="midi" value="midi" selected="selected">Midi</option>
+                  <option id="soir" value="soir">Soir</option>
               </select>
 
-              <select name="creneau" id="horaires">
-              <div id="midi">
-                  <option selected="yes">12h</option>
-                  <option class="midi" >12h15</option>
-                  <option class="midi">12h30</option>
-                  <option class="midi">12h45</option>
-                  <option class="midi">13h</option>
-                  <option class="midi">13h15</option>
-                  <option class="midi">13h30</option>
-                  <option class="midi">13h45</option>
-                  <option class="midi">14h</option>
-              </div>
-              <div id="soir">
-                  <option selected="yes">12h</option>
-                  <option class="soir hidden">12h15</option>
-                  <option class="soir hidden">12h30</option>
-                  <option class="soir hidden">12h45</option>
-                  <option class="soir hidden">13h</option>
-                  <option class="soir hidden">13h15</option>
-                  <option class="soir hidden">13h30</option>
-                  <option class="soir hidden">13h45</option>
-                  <option class="soir hidden">14h</option>
-              </div>
-          </select>
-          </div>
+             
+              <select name="creneau" id="H-midi">
+                  <option selected="selected">12h</option>
+                  <option>12h15</option>
+                  <option>12h30</option>
+                  <option>12h45</option>
+                  <option>13h</option>
+                  <option>13h15</option>
+                  <option>13h30</option>
+                  <option>13h45</option>
+                  <option>14h</option>
+             </select> 
+
+              <select name="creneau" id="H-soir"> 
+                  <option selected="selected">20h</option>
+                  <option>20h15</option>
+                  <option>20h30</option>
+                  <option>20h45</option>
+                  <option>21h</option>
+                  <option>21h15</option>
+                  <option>21h30</option>
+                  <option>21h45</option>
+                  <option>22h</option>
+                  
+              </select>
+
+          
+      </div>
          
           <div class="email">
             <span><i class="fa-solid fa-envelope"></i></span>
@@ -350,9 +352,7 @@
           <div class="envoyer">
             <input type="submit" name="envoyer" value="Envoyer" />
           </div>
-        </form>';
-
-        ?>
+        </form>
 
 
         <div class="map">
