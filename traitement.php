@@ -52,18 +52,20 @@ switch($action) {
         unset($_SESSION["reservations"][$index]);
         header("Location:panier.php");
  
-     break;
+    break;
 
-     case "upNbPersonne";
+    case "upNbPersonne";
         $_SESSION['reservations'][$id]['nbPersonne']++  ;
         header("Location:panier.php");
         break;
 
-        case "downNbPersonne";
+    case "downNbPersonne";
         $_SESSION['reservations'][$id]['nbPersonne']--;
         if($_SESSION['reservations'][$id]['nbPersonne']==0){
             unset($_SESSION['reservations'][$id]);
         }
+        header("Location:panier.php");
+    break;
 }
 
 ?>
