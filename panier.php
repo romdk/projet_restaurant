@@ -27,7 +27,7 @@ session_start() ;
         <section id="top">
           <div class="logo"><img src="./images/logo_2.png" alt="" /></div>
           <ul class="nav">
-            <li class="header"><a href="#accueil">PANIER</a></li>
+            <li class="reservations"><a href="panier.php">RESERVATIONS <span class="nbReservation"><?php echo count($_SESSION['reservations'])?></span></a></li>
             <li class="header"><a href="index.php">RETOUR</a></li>
             
             <div class="indicateur"></div>
@@ -80,7 +80,7 @@ session_start() ;
                                     "<td>   <select name='heure' id='heure' onchange='toggleCreneaux()'>
                                     <option id='midi' value='midi' selected='selected'>".$reservation['heure']."</option>
                                     <option id='soir' value='soir'>Soir</option>
-                                </select>'</td>",
+                                </select></td>",
                                     "<td>".$reservation['creneau']."</td>",
                                     "<td> <input
                                     id='email'
