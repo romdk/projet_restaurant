@@ -700,7 +700,6 @@ position: relative;
     9.6px 12.5px 10px rgba(0, 0, 0, 0.035),
     23.2px 30.1px 24.1px rgba(0, 0, 0, 0.046),
     77px 100px 80px rgba(0, 0, 0, 0.07);
-    border: 2px solid yellow;
 }
 
 #contact form .nomPrenom{
@@ -810,14 +809,13 @@ position: relative;
     background-color: var(--clr-card);
     border-radius: 5px;
     width: 700px;
-    height: 434px;
+    height: 504px;
     padding: 20px;
     box-shadow:
     3.5px 4.5px 3.6px rgba(0, 0, 0, 0.024),
     9.6px 12.5px 10px rgba(0, 0, 0, 0.035),
     23.2px 30.1px 24.1px rgba(0, 0, 0, 0.046),
     77px 100px 80px rgba(0, 0, 0, 0.07);
-    border:2px solid red;
 }
 
 #contact iframe{
