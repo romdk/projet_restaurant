@@ -55,7 +55,7 @@ session_start() ;
                             "<th>Créneau</th>",
                             "<th>Email</th>",
                             "<th>Message</th>",
-                            "<th></th>",
+                            "<th>Plat du jour</th>",
                             "<th>"."<a class='bouton1' href=traitement.php?action=effacerReservations>Effacer reservations</a>"."</th>", 
                           "</tr>",
                         "</thead>",
