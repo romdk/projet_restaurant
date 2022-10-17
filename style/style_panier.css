@@ -1,5 +1,16 @@
 @import url("style_index.css");
 
+#top li:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+
+}
+
+#top li:hover .nbReservation{
+    background-color:  rgba(255, 255, 255, 0.356);
+}
+
 #main{
     background-color: #f1f1f1;
     display: flex;
