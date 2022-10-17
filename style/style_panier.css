@@ -75,6 +75,11 @@ table td:nth-child(10){
     transition: .4s;
 }
 
+/*Zébrage des lignes pair du tableau
+table tr:nth-child(even){
+    background-color: brown;
+}*/
+
 table td:nth-child(9){
     justify-content: center;
     width: 320px;
