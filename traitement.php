@@ -12,19 +12,13 @@ switch($action) {
 
     
     if(isset($_POST['envoyer'])){
-        $name = $_POST['name'];
-        $nbPersonne = $_POST['nbPersonne'];
-         $message = $_POST['message'];
-        $email = $_POST['email'];
-        $jour = $_POST['jour'];
-        $heure = $_POST['heure'];
         $creneau = $_POST['creneau'];
-        // $name =filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING);
-        // $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_STRING);
-        // $heure =filter_input(INPUT_POST,"heure",FILTER_SANITIZE_STRING);
-        // $nbPersonne =filter_input(INPUT_POST,"nbPersonne",FILTER_VALIDATE_INT,FILTER_FLAG_ALLOW_FRACTION);
-        // $message =filter_input(INPUT_POST,"message",FILTER_SANITIZE_STRING);
-        // $email=filter_input(INPUT_POST,"email", FILTER_SANITIZE_EMAIL);
+        $name =filter_input(INPUT_POST,"name",FILTER_SANITIZE_SPECIAL_CHARS);
+        $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_SPECIAL_CHARS);
+        $heure =filter_input(INPUT_POST,"heure",FILTER_SANITIZE_SPECIAL_CHARS);
+        $nbPersonne =filter_input(INPUT_POST,"nbPersonne",FILTER_VALIDATE_INT);
+        $message =filter_input(INPUT_POST,"message",FILTER_SANITIZE_SPECIAL_CHARS);
+        $email=filter_input(INPUT_POST,"email", FILTER_VALIDATE_EMAIL);
 
     
 
@@ -46,6 +40,29 @@ switch($action) {
 
         
     }
+    break;
+
+    case"modifierReservation";
+
+ 
+
+        if($name && $nbPersonne && $jour && $heure && $creneau && $email ){
+            $reservation =[
+                "name" => $name ,
+                "nbPersonne"=>$nbPersonne ,
+                "jour"=>$jour,
+                "heure"=>$heure,
+                "creneau"=>$creneau,
+                "email"=>$email,
+                "message"=>$message ];
+
+        $_SESSION['reservations'][$id]=$reservation;
+        }
+        header("Location:panier.php");
+        
+
+
+
     break;
 
     case "effacerReservations";
