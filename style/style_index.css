@@ -117,11 +117,16 @@ section{
 
 #top ul a{
     color: var(--clr-texte1);
+
     /* font-size: 1.4rem; */
 }
 
+
 #top li{
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 20px;
     border-radius: 10px;
@@ -159,10 +164,31 @@ section{
     transform: translateX(calc(250px * 4));
     
 }
+#top li:nth-child(6) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+
+}
 
 .anim-logo{
     /* transform: translateX(400px); */
     transform: translateY(-45px);
+}
+
+.reservations{
+    position: relative;
+}
+
+.nbReservation{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--clr-accent);
 }
 
 /* ------------------------------------------ACCUEIL------------------------------- */
