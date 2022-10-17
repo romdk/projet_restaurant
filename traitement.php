@@ -22,7 +22,6 @@ switch($action) {
         // $name =filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING);
         // $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_STRING);
         // $heure =filter_input(INPUT_POST,"heure",FILTER_SANITIZE_STRING);
-        // $email =filter_input(INPUT_POST,"creneau",FILTER_SANITIZE_STRING);
         // $nbPersonne =filter_input(INPUT_POST,"nbPersonne",FILTER_VALIDATE_INT,FILTER_FLAG_ALLOW_FRACTION);
         // $message =filter_input(INPUT_POST,"message",FILTER_SANITIZE_STRING);
         // $email=filter_input(INPUT_POST,"email", FILTER_SANITIZE_EMAIL);
