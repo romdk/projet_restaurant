@@ -44,27 +44,35 @@
 //     })
 
 
-const midi = document.getElementById('midi');
-const soir = document.getElementById('soir');
+// const midi = document.getElementById('midi');
+// const soir = document.getElementById('soir');
 const midiHeures = document.getElementById('H-midi') ; 
 const soirHeures = document.getElementById('H-soir') ; 
 
 function Affichage(){
     midiHeures.classList.add('hidden1');
     soirHeures.classList.remove('hidden1');
+    // changer attribut creneau
+    soirHeures.setAttribute('name','creneau') ;
+    midiHeures.removeAttribute('name');
+  
 }
 function Affichagesoir(){
     midiHeures.classList.remove('hidden1');
     soirHeures.classList.add('hidden1');
+    // changer attribut creneau
+    midiHeures.setAttribute('name','creneau') ;
+    soirHeures.removeAttribute('name');
+  
+ 
 }
 function toggleCreneaux(){
-  
-    console.log(document.getElementById("heure").selectedIndex);
-    if(this.selectedIndex==0){
+    heure = document.getElementById("heure").selectedIndex;     
+    if(heure==0){
        
         Affichagesoir();
 
-    }else if(this.selectedIndex==1){
+    }else if(heure==1){
         
         Affichage();
     }
