@@ -55,6 +55,7 @@ session_start() ;
                             "<th>Créneau</th>",
                             "<th>Email</th>",
                             "<th>Message</th>",
+                            "<th>Plat du jour</th>",
                             "<th></th>",
                             "<th>"."<a class='bouton1' href=traitement.php?action=effacerReservations>Effacer reservations</a>"."</th>", 
                           "</tr>",
@@ -82,15 +83,12 @@ session_start() ;
                                     <option id='soir' value='soir'>Soir</option>
                                 </select></td>",
                                     "<td>".$reservation['creneau']."</td>",
-                                    "<td> <input
-                                    id='email'
-                                    type='text' name='email'
-                                    placeholder=".$reservation['email']."
-                                  /><br /></td>",
+                                    "<td>".$reservation['email']."</td>",
                                     "<td>".$reservation['message']."</td>",
                                     "<td>
-                                      <button class='bouton2'> Afficher menu<p class='plat'>".$_SESSION['platDuJour'][$jour]."</p></button>",
-                                      "</td>",
+                                    <button class='bouton2'> Afficher menu<p class='plat'>".$_SESSION['platDuJour'][$jour]."</p></button>",
+                                    "</td>",
+                                    "<td>"."<a class='bouton1' href=traitement.php?action=modifierReservation&id=$index>ModifierReservation</a>"."</td>",
                                     "<td>"."<a href=traitement.php?action=supprimerUneReservation&index=$index><i class='fa-solid fa-xmark'></i></a>"."</td>",
                                   "</tr>";    
                                 }
