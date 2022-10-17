@@ -66,10 +66,27 @@ session_start() ;
                                     "<td>".$index."</td>",
                                     "<td>".$reservation['name']."</td>",
                                     "<td><a href='traitement.php?action=downNbPersonne&id=$index'><i class='fa-solid fa-minus'></i></a>".$reservation['nbPersonne']."<a href='traitement.php?action=upNbPersonne&id=$index'><i class='fa-solid fa-plus'></i></a></td>",
-                                    "<td>".$reservation['jour']."</td>",
-                                    "<td>".$reservation['heure']."</td>",
+                                    "<td> <select name='jour'>
+                                    <option selected='selected'>".$reservation['jour']."</option>
+                                    <option >lundi</option>
+                                    <option >mardi</option>
+                                    <option>mercredi</option>
+                                    <option>jeudi</option>
+                                    <option>vendredi</option>
+                                    <option>samedi</option>
+                                    <option>dimanche</option>
+                                </select>
+                         </td>",
+                                    "<td>   <select name='heure' id='heure' onchange='toggleCreneaux()'>
+                                    <option id='midi' value='midi' selected='selected'>".$reservation['heure']."</option>
+                                    <option id='soir' value='soir'>Soir</option>
+                                </select>'</td>",
                                     "<td>".$reservation['creneau']."</td>",
-                                    "<td>".$reservation['email']."</td>",
+                                    "<td> <input
+                                    id='email'
+                                    type='text' name='email'
+                                    placeholder=".$reservation['email']."
+                                  /><br /></td>",
                                     "<td>".$reservation['message']."</td>",
                                     "<td>
                                       <button class='bouton2'> Afficher menu<p class='plat'>".$_SESSION['platDuJour'][$jour]."</p></button>",

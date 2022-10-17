@@ -40,7 +40,7 @@ switch($action) {
 
         $_SESSION['reservations'][]=$reservation;
         }
-        header("Location:index.php");
+        header("Location:index.php#contact");
         
 
 
