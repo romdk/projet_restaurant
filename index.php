@@ -43,6 +43,8 @@
             <li class="evenements"><a href="#evenements">EVENEMENTS</a></li>
             <li class="contact"><a href="#contact">CONTACT</a></li>
             <li class="reservations"><a href="panier.php">RESERVATIONS <span class="nbReservation"><?php echo count($_SESSION['reservations'])?></span></a></li>
+                     <!-------------- BOUTON DARK MODE ----------------->
+            <li class="btn-toggle"><Go href="#btn-toggle">Go dark</a></li> 
             <div class="indicateur"></div>
           </ul>
           <div class="burger">
@@ -372,13 +374,7 @@
       <div class="back-to-top">
         <a href="#accueil"><i class="fa-solid fa-chevron-up"></i></a>
       </div>
-      <!----------------------------------------- BOUTON DARK MODE ----------------------------------------->
-      <div class="btn-toggle">Go Dark</div>
-
-      <!--<div class = "Light"><a href=" "></i>="fa-solid fa-sun-bright"></i> </a> </div>
-
-        <div class = "Dark"></div><a href=" "></i>="fa-solid fa-moon-stars"></i> </a> </div>-->
-
+      
       <!---------------------------------------------- FOOTER ---------------------------------------------->
       <footer id="footer">
         <div class="horaires">
