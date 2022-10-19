@@ -32,21 +32,17 @@
   <body class="light">
     <div id="container">
       <header>
-        <!--------------------------- TOP --------------------------------------->
-        <section id="top">
+<!--------------------------- TOP --------------------------------------->
+<section id="top">
           <div class="logo"><img src="./images/logo_2.png" alt="" /></div>
           <ul class="nav">
             <li class="header"><a href="#accueil">ACCUEIL</a></li>
             <li class="galerie"><a href="#galerie">GALERIE</a></li>
             <li class="plat"><a href="#plat">NOTRE MENU</a></li>
             <li class="evenements"><a href="#evenements">EVENEMENTS</a></li>
-            <li class="contact"><a href="#contact">CONTACT</a></li>
-            <li class="reservations"><a href="panier.php">RESERVATIONS <span class="nbReservation"><?php echo count($_SESSION['reservations'])?></span></a></li>
+            <li class="contact"><a href="#contact">RESERVER</a></li>
             <div class="indicateur"></div>
           </ul>
-          <!----------------------------------------- BOUTON DARK MODE ----------------------------------------->
-          <div class="btn-toggle">Go Dark</div>
-      
           <div class="burger">
             <span></span>
             <span></span>
@@ -281,7 +277,7 @@
 
        
         <form action="traitement.php?action=ajouterReservation" method="post">
-          <h3>Contactez-nous</h3>
+          <h3>Reservez une table</h3>
           <div class="nomPrenom">
             <span><i class="fa-solid fa-user"></i></span>
             <input id="nom" type="text" name="name" placeholder="Entrez votre nom et prenom" />
@@ -374,6 +370,13 @@
       <div class="back-to-top">
         <a href="#accueil"><i class="fa-solid fa-chevron-up"></i></a>
       </div>
+
+      <!------------------------------------------BOUTON RESERVATIONS ------------------------------------>
+      <div class="reservations"><a href="panier.php"><i class="fa-solid fa-bell-concierge"></i><span class="nbReservation"><?php if(isset($_SESSION['reservations'])){ echo count($_SESSION['reservations']);} else{echo "0";}?></span></a></div>
+
+      <!----------------------------------------- BOUTON DARK MODE ----------------------------------------->
+      <div class="btn-toggle">Go Dark</div>
+
           
       <!---------------------------------------------- FOOTER ---------------------------------------------->
       <footer id="footer">
