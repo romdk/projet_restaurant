@@ -235,7 +235,7 @@
                 >Après sa victoire à Memphis Special, le groupe annonce un
                 concert au QUAI DES MACHINES</span
               >
-              <span class="text">Le 25-02-23 </span>
+              <span class="text">Le 18-06-23 </span>
               <span class="text">à 22:00h</span>
             </div>
           </div>
@@ -253,7 +253,7 @@
                 misé sur l’amitié et la rencontre d’énergies créatrices pour
                 produire des œuvres collaboratives spontanées</span
               >
-              <span class="text">Le 25-03-23 </span>
+              <span class="text">Le 18-07-23 </span>
               <span class="text">à 22:00h</span>
             </div>
           </div>
@@ -262,7 +262,7 @@
             <div class="exEvenement">
               <span class="text">Memphis Special</span>
               <span class="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quam et enim dolorum delectus quis ducimus quos odit nemo ex.</span>
-              <span class="text">Le 25-01-23 </span>
+              <span class="text">Le 18-08-23 </span>
               <span class="text">à 22:00h</span>
             </div>
           </div>
