@@ -34,7 +34,7 @@ body.dark{
 
     --clr-light: #4d0019;
     --clr-dark:  #330011;
-    --clr-nav: #18181f;
+    --clr-nav: #181f18;
     --clr-card : #1d1e22;
     --clr-txtzone : #25262a;
 
@@ -85,7 +85,7 @@ section{
     z-index: 1;
     position: fixed;
     width: 100vw;
-    height: 60px;
+    height: 50px;
 
     display: flex;
     flex-wrap: wrap;
@@ -166,12 +166,8 @@ section{
     transform: translateX(calc(250px * 4));
     
 }
-/* ------------------------------------------------ bouton dark  burger -------------------------------------- */
-#top li:nth-child(6).active ~ .indicateur{
-    transform: translateX(calc(250px * 5));
-    
-}
-#top li:nth-child(8) {
+
+#top li:nth-child(6) {
     display: flex;
     justify-content: space-between;
     padding-left: 5px;
@@ -211,7 +207,6 @@ section{
     border-radius: 50%;
     background-color: var(--clr-accent);
 }
-
 /* ------------------------------------------ACCUEIL------------------------------- */
 
 #accueil{
@@ -1289,8 +1284,20 @@ background-color: var(--clr-accent);
         }
 
         .btn-toggle{
-            top: 254px;
-            z-index: 0;
+            position: fixed;
+            top:0px;
+            right: 0px;
+            width: 50px;
+            height: 50px;
+            z-index: 5;
+            background:var(--clr-texte3);
+            color:var(--clr-texte2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: .4s;
         }
 
         
