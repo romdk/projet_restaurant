@@ -65,9 +65,8 @@ session_start() ;
                             $jour = $reservation['jour'];
                             echo "<tr>",
                                     "<td>".$index."</td>",
-                                    "<form action='traitement.php?action=modifierReservation&id=$index' method='post'>",
-                                    "<td>".$reservation['name']."</td>",
-                                    "<td><a href='traitement.php?action=downNbPersonne&id=$index'><i class='fa-solid fa-minus'></i></a>".$reservation['nbPersonne']."<a href='traitement.php?action=upNbPersonne&id=$index'><i class='fa-solid fa-plus'></i></a></td>",
+                                    "<td><form action='traitement.php?action=modifierReservation&id=$index' method='post'>".$reservation['name']."</td>",
+                                    "<td><a href='  traitement.php?action=downNbPersonne&id=$index'><i class='fa-solid fa-minus'></i></a>".$reservation['nbPersonne']."<a href='traitement.php?action=upNbPersonne&id=$index'><i class='fa-solid fa-plus'></i></a></td>",
                                     "<td> <select name='jour'>
                                     <option selected='selected'>".$reservation['jour']."</option>
                                     <option >lundi</option>
