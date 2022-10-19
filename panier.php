@@ -65,6 +65,7 @@ session_start() ;
                             $jour = $reservation['jour'];
                             echo "<tr>",
                                     "<td>".$index."</td>",
+                                    "<form action='traitement.php?action=modifierReservation&id=$index' method='post'>",
                                     "<td>".$reservation['name']."</td>",
                                     "<td><a href='traitement.php?action=downNbPersonne&id=$index'><i class='fa-solid fa-minus'></i></a>".$reservation['nbPersonne']."<a href='traitement.php?action=upNbPersonne&id=$index'><i class='fa-solid fa-plus'></i></a></td>",
                                     "<td> <select name='jour'>
@@ -79,17 +80,42 @@ session_start() ;
                                 </select>
                          </td>",
                                     "<td>   <select name='heure' id='heure' onchange='toggleCreneaux()'>
-                                    <option id='midi' value='midi' selected='selected'>".$reservation['heure']."</option>
+                                    <option id='midi' value='midi' selected='selected'>Midi</option>
                                     <option id='soir' value='soir'>Soir</option>
                                 </select></td>",
-                                    "<td>".$reservation['creneau']."</td>",
+                                    "<td> <select name='creneau' id='H-midi'>
+                                    <option selected='selected'>".$reservation['creneau']."</option>
+                                    <option>12h15</option>
+                                    <option>12h30</option>
+                                    <option>12h45</option>
+                                    <option>13h</option>
+                                    <option>13h15</option>
+                                    <option>13h30</option>
+                                    <option>13h45</option>
+                                    <option>14h</option>
+                               </select> 
+                  
+                                <select  id='H-soir' class ='hidden1' > 
+                                    <option >20h</option>
+                                    <option >20h15</option>
+                                    <option >20h30</option>
+                                    <option >20h45</option>
+                                    <option >21h</option>
+                                    <option >21h15</option>
+                                    <option >21h30</option>
+                                    <option >21h45</option>
+                                    <option >22h</option>
+                                    
+                                </select></td>",
                                     "<td>".$reservation['email']."</td>",
                                     "<td>".$reservation['message']."</td>",
                                     "<td>
+                                    
                                     <button class='bouton2'> Afficher menu<p class='plat'>".$_SESSION['platDuJour'][$jour]."</p></button>",
                                     "</td>",
-                                    "<td>"."<a class='bouton1' href=traitement.php?action=modifierReservation&id=$index>ModifierReservation</a>"."</td>",
+                                    "<td>"."<input class='bouton1' type='submit' name='modifier' value='Modifification' />"."</td>",
                                     "<td>"."<a href=traitement.php?action=supprimerUneReservation&index=$index><i class='fa-solid fa-xmark'></i></a>"."</td>",
+                                   " </form>",
                                   "</tr>";    
                                 }
                           }
@@ -100,6 +126,7 @@ session_start() ;
         </section>
 
         <script src="./js/afficherMenu.js"></script>
+        <script src="./js/form.js"></script>
   </body>
 </html>
 

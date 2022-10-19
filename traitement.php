@@ -12,7 +12,7 @@ switch($action) {
 
     
     if(isset($_POST['envoyer'])){
-        $creneau = $_POST['creneau'];
+        $creneau =filter_input(INPUT_POST,"creneau",FILTER_SANITIZE_SPECIAL_CHARS);
         $name =filter_input(INPUT_POST,"name",FILTER_SANITIZE_SPECIAL_CHARS);
         $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_SPECIAL_CHARS);
         $heure =filter_input(INPUT_POST,"heure",FILTER_SANITIZE_SPECIAL_CHARS);
@@ -43,25 +43,33 @@ switch($action) {
     break;
 
     case"modifierReservation";
-
- 
-
-        if($name && $nbPersonne && $jour && $heure && $creneau && $email ){
+    if(isset($_POST['modifier'])){
+        $creneau=$_POST["creneau"];
+        $heure=$_POST["heure"]; 
+        $jour=$_POST["jour"]; 
+        
+        // $creneau =filter_input(INPUT_POST,"creneau",FILTER_SANITIZE_SPECIAL_CHARS);
+        // $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_SPECIAL_CHARS);
+        // $heure =filter_input(INPUT_POST,"heure",FILTER_SANITIZE_SPECIAL_CHARS);
+        
+        
+        if($jour && $heure && $creneau){
+            
             $reservation =[
-                "name" => $name ,
-                "nbPersonne"=>$nbPersonne ,
+                "name" => $_SESSION['reservations'][$id]['name'] ,
+                "nbPersonne"=>$_SESSION['reservations'][$id]['nbPersonne'] ,
                 "jour"=>$jour,
                 "heure"=>$heure,
                 "creneau"=>$creneau,
-                "email"=>$email,
-                "message"=>$message ];
+                "email"=>$_SESSION['reservations'][$id]['email'],
+                "message"=>$_SESSION['reservations'][$id]['message']];
 
         $_SESSION['reservations'][$id]=$reservation;
         }
         header("Location:panier.php");
         
 
-
+    }
 
     break;
 
@@ -89,5 +97,3 @@ switch($action) {
         header("Location:panier.php");
     break;
 }
-
-?>
