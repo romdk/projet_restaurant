@@ -67,17 +67,11 @@ session_start() ;
                                     "<td>".$index."</td>",
                                     "<td><form action='traitement.php?action=modifierReservation&id=$index' method='post'>".$reservation['name']."</td>",
                                     "<td><a href='  traitement.php?action=downNbPersonne&id=$index'><i class='fa-solid fa-minus'></i></a>".$reservation['nbPersonne']."<a href='traitement.php?action=upNbPersonne&id=$index'><i class='fa-solid fa-plus'></i></a></td>",
-                                    "<td> <select name='jour'>
-                                    <option selected='selected'>".$reservation['jour']."</option>
-                                    <option >lundi</option>
-                                    <option >mardi</option>
-                                    <option>mercredi</option>
-                                    <option>jeudi</option>
-                                    <option>vendredi</option>
-                                    <option>samedi</option>
-                                    <option>dimanche</option>
-                                </select>
-                         </td>",
+                                    "<td> ","
+                                      <select name='jour'>",
+                                        "<option class='indexJour hidden1'>". $reservation['jour'] . "</option>",
+                                      "</select>",
+                                    "</td>",
                                     "<td>   <select name='heure' id='heure' onchange='toggleCreneaux()'>
                                     <option id='midi' value='midi' selected='selected'>".$reservation['heure']."</option>
                                     <option id='soir' value='soir'>Soir</option>
@@ -126,6 +120,10 @@ session_start() ;
 
         <script src="./js/afficherMenu.js"></script>
         <script src="./js/form.js"></script>
+        <script>
+          var test = '<?php echo $_SESSION["reservations"][0]['heure'];?>';
+          ajouterOption(test);
+        </script>
   </body>
 </html>
 

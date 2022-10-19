@@ -1,53 +1,11 @@
-
-// const heureBtn = document.querySelectorAll('.midi1');
-// const midi = document.querySelectorAll('.midi');
-// const soir = document.querySelectorAll('.soir');
-// const horaires = document.querySelector('#horaires')
-
-
-// console.log(midi);
-// console.log(soir);
-// console.log(heureBtn );
-
-
-// Modification des horaires possible tous dépend du choix Midi / Soir
-// Horaire du Midi par défault
-
-// function myFunction1(){
-//     heureBtn.addEventListener("click", function(){
-//         midi.document.add('hidden1');
-//         soir.document.remove('hidden1');
-//     })
-// }
-// heureBtn.forEach(myFunction1);
-
-
-
-// heureBtn.addEventListener("change", () => {
-//     console.log('test');  
-//     midi.classList.toggle('hidden');
-//     soir.classList.toggle('hidden');
-// });
-// heureBtn.forEach((midi1) => (){
-//     midi.document.add('hidden1');
-//     soir.document.remove('hidden1');
-// }
- 
-//  cards= document.querySelectorAll('.evenvement');
-
-// function myFunction() {
-//     card.addEventListener("click", function () {
-//       tableauDetail = card.querySelector('.exEvenement')
-//       tableauImg = card.querySelector('.concerteImg')
-//       tableauDetail.classList.toggle("animEvenement");
-//       tableauImg.classList.toggle("animConcerteImg");
-//     })
-
-
-// const midi = document.getElementById('midi');
-// const soir = document.getElementById('soir');
 const midiHeures = document.getElementById('H-midi') ; 
 const soirHeures = document.getElementById('H-soir') ; 
+const selectJour = document.getElementsByName('jour');
+
+const selectHeure = document.getElementsByName('heure');
+const selectCreneau = document.getElementsByName('creneau');
+const tableauJourReserv = document.getElementsByClassName('indexJour');
+let reservationJour = sessionStorage.getItem("")
 
 function Affichage(){
     midiHeures.classList.add('hidden1');
@@ -78,6 +36,27 @@ function toggleCreneaux(){
     }
 }
 
+
+var i =0;
+const jour = ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"]
+function ajouterOption(){
+    console.log(tableauJourReserv);
+
+    tableauJourReserv.forEach(() => {
+            jour.forEach(() => {
+                if(jour !== 0 ){
+                    console.log(test);
+                        var jourElem = document.createElement('option');
+                        jourElem.setAttribute("value", jour);
+                        selectJour[0].appendChild(jourElem);
+                }
+                else{
+                        selectJour.append("<option selected='selected'>"+jour+"</option>")
+                }                
+            });
+            i++;
+    })
+};
 
 
 
