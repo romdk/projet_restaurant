@@ -85,7 +85,7 @@ section{
     z-index: 1;
     position: fixed;
     width: 100vw;
-    height: 50px;
+    height: 60px;
 
     display: flex;
     flex-wrap: wrap;
@@ -132,20 +132,21 @@ section{
     border-radius: 10px;
     transition: .2s;
     z-index: 1;
+    overflow: hidden;
 }
 
 #top li:hover{
     background-color: rgba(255, 255, 255, 0.356);
-}
-
-#top .indicateur{
-    position: absolute;
-    width: 150px;
-    height: 20px;
-    background-color: var(--clr-accent);
-    border-radius: 10px;
-    transition: .5s ;
-}
+    }
+    
+    #top .indicateur{
+        position: absolute;
+        width: 150px;
+        height: 20px;
+        background-color: var(--clr-accent);
+        border-radius: 10px;
+        transition: .5s ;
+    }
 
 /* permet d'animer l'indicateur dans la barre de navigation */
 #top li:nth-child(1).active ~ .indicateur{ 
@@ -981,7 +982,7 @@ background-color: var(--clr-accent);
     transform: translateY(-60px );         
 }
 
-/* -----------------------------------BOUTON DARKMODE-------------------------- */
+/* ----------------------------------- ancien BOUTON DARKMODE-------------------------- */
 
 /*.btn-toggle{
     position: fixed;
