@@ -34,7 +34,7 @@ body.dark{
 
     --clr-light: #4d0019;
     --clr-dark:  #330011;
-    --clr-nav: #18181f;
+    --clr-nav: #181f18;
     --clr-card : #1d1e22;
     --clr-txtzone : #25262a;
 
@@ -207,13 +207,6 @@ section{
     border-radius: 50%;
     background-color: var(--clr-accent);
 }
-/*.nav{
-    
-    width: 90%;
-    height: 50px;
-    text-align: center;
-    border: 5px solid yellow;
-}*/
 /* ------------------------------------------ACCUEIL------------------------------- */
 
 #accueil{
@@ -1291,8 +1284,20 @@ background-color: var(--clr-accent);
         }
 
         .btn-toggle{
-            top: 254px;
-            z-index: 0;
+            position: fixed;
+            top:0px;
+            right: 0px;
+            width: 50px;
+            height: 50px;
+            z-index: 5;
+            background:var(--clr-texte3);
+            color:var(--clr-texte2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: .4s;
         }
 
         

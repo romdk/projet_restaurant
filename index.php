@@ -32,7 +32,6 @@
   <body class="light">
     <div id="container">
       <header>
-        
         <!--------------------------- TOP --------------------------------------->
         <section id="top">
           <div class="logo"><img src="./images/logo_2.png" alt="" /></div>
@@ -43,10 +42,11 @@
             <li class="evenements"><a href="#evenements">EVENEMENTS</a></li>
             <li class="contact"><a href="#contact">CONTACT</a></li>
             <li class="reservations"><a href="panier.php">RESERVATIONS <span class="nbReservation"><?php echo count($_SESSION['reservations'])?></span></a></li>
-                     <!-------------- BOUTON DARK MODE ----------------->
-            <li class="btn-toggle"><Go href="#btn-toggle">Go dark</a></li> 
             <div class="indicateur"></div>
           </ul>
+          <!----------------------------------------- BOUTON DARK MODE ----------------------------------------->
+          <div class="btn-toggle">Go Dark</div>
+      
           <div class="burger">
             <span></span>
             <span></span>
@@ -374,7 +374,7 @@
       <div class="back-to-top">
         <a href="#accueil"><i class="fa-solid fa-chevron-up"></i></a>
       </div>
-      
+          
       <!---------------------------------------------- FOOTER ---------------------------------------------->
       <footer id="footer">
         <div class="horaires">
