@@ -1,9 +1,7 @@
 choses à faire
 
 empecher doublon jour menu deroulant panier
-resoudre modification reservation dans panier
 integrer le bouton darkmode dans le menu burger au format mobile
-finir le readme
 modifier affichage nb reservation dans la navbar
 redimensionner images dans l'accordeon du menu de la semaine
 styliser les menu deroulants
