@@ -3,7 +3,7 @@ project Restaurant
 This project is a website of a fictional Restaurant. 
 This is a one page with five sections and an external page.
 
-The website contain the following sections: 
+The website contain the following sections: <br>
 -Accueil: this is the homepage of the website, it contain a short looped video displayed in fullscreen showing the restaurant premises.
 -Galerie: this is the gallery of the restaurant, it contain 2 carousel, the left one displays pictures of the restaurant premises and the other one display some food.
 -Notre Menu: this section is dedicated for the weekly menu, it contain an accordion showing the menu of each day of the week.
