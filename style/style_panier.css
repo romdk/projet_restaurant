@@ -1,14 +1,19 @@
 @import url("style_index.css");
 
-#top li:nth-child(1) {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 5px;
-
+#top .logo{
+    position: fixed;
+    top: -45px;
+    left: 40%;
 }
 
-#top li:hover .nbReservation{
-    background-color:  rgba(255, 255, 255, 0.356);
+#top .retour{
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+
+.reservations:hover .nbReservation,.reservations:hover .fa-bell-concierge{
+    color: white;
 }
 
 #main{
@@ -95,10 +100,18 @@ table tr:nth-child(even){
     background-color: brown;
 }*/
 
+table td{
+    text-align: center;
+}
 table td:nth-child(9){
+    text-align: left;
+}
+table td:nth-child(10){
+    padding-left: 80px;
     justify-content: center;
     width: 320px;
 }
+
 .bouton2{
     position: relative;
     display: flex;
@@ -136,6 +149,7 @@ table td:nth-child(9){
     border: none;
     overflow: hidden;
     transition: .4s;
+    cursor: pointer;
 }
 
 .bouton3:hover{
@@ -162,7 +176,6 @@ table td:nth-child(9){
     background-color: #f1f1f1;
     width: 300px;
     height: 100px;
-    transform: translateX(0px);
 }
 
 .bouton2active:hover{
