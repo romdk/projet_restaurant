@@ -3,14 +3,24 @@ project Restaurant
 This project is a website of a fictional Restaurant. 
 This is a one page with five sections and an external page.
 
+The website contain the following sections: 
+-Accueil: this is the homepage of the website, it contain a short looped video displayed in fullscreen showing the restaurant premises.
+-Galerie: this is the gallery of the restaurant, it contain 2 carousel, the left one displays pictures of the restaurant premises and the other one display some food.
+-Notre Menu: this section is dedicated for the weekly menu, it contain an accordion showing the menu of each day of the week.
+-Evenements: this is the events section, it contain upcoming events with a short description.
+-Reservation: this section contain a form that allow you to hold a reservation, and an interactive map showing the location of the restaurant.
+
+The external page displays all your reservations in a table, in which you can change informations if needed but also delete one or all reservations.
+
+
 ## Lessons Learned
 
 What did you learn while building this project? What challenges did you face and how did you overcome them?
 
-this is our first project since we started learn web developement and we learned the basics of HTML&CSS,js and php.
-after that we were working in group and we splitted tasks to save time that we worked efficiently,
+This is our first project since we've learned the basics of HTML&CSS,js and php.
+We learned to work as a group, we splitted tasks to save time so we worked efficiently,
 we also leaned to use the differents super globals in php.   
-While working as a team we learned how to work with GitHub as co-workers.## Color Reference
+While working as a team we learned how to work with GitHub as co-workers.
 
 ## Color Reference
 
@@ -41,15 +51,14 @@ While working as a team we learned how to work with GitHub as co-workers.## Colo
 ## Features
 
 - Light/dark mode toggle
-- Desktop mode
-- Mobile mode
+- responsive for mobile and tablet
 
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** HTML, CSS, JS
 
-**Server:** Node, Express
+**Server:** PHP
 
 
 
