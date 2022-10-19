@@ -85,7 +85,7 @@ section{
     z-index: 1;
     position: fixed;
     width: 100vw;
-    height: 60px;
+    height: 50px;
 
     display: flex;
     flex-wrap: wrap;
@@ -166,12 +166,8 @@ section{
     transform: translateX(calc(250px * 4));
     
 }
-/* ------------------------------------------------ bouton dark  burger -------------------------------------- */
-#top li:nth-child(6).active ~ .indicateur{
-    transform: translateX(calc(250px * 5));
-    
-}
-#top li:nth-child(8) {
+
+#top li:nth-child(6) {
     display: flex;
     justify-content: space-between;
     padding-left: 5px;
@@ -211,7 +207,13 @@ section{
     border-radius: 50%;
     background-color: var(--clr-accent);
 }
-
+/*.nav{
+    
+    width: 90%;
+    height: 50px;
+    text-align: center;
+    border: 5px solid yellow;
+}*/
 /* ------------------------------------------ACCUEIL------------------------------- */
 
 #accueil{
