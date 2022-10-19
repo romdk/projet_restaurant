@@ -16,22 +16,22 @@ session_start() ;
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style/style_panier.css" />
+    <link rel="stylesheet" href="./style/style_panier.css"/>
     <title>Reservation</title>
   </head>
   <body>
   <div id="container">
       <header>
         
-        <!--------------------------- TOP --------------------------------------->
+<!-------------------------------------------- TOP --------------------------------------->
         <section id="top">
+          <div class="retour"><a class='bouton1' href="index.php">RETOUR</a></div>            
           <div class="logo"><img src="./images/logo_2.png" alt="" /></div>
-          <ul class="nav">
-            <li class="reservations"><a href="panier.php">RESERVATIONS <span class="nbReservation"><?php echo count($_SESSION['reservations'])?></span></a></li>
-            <li class="header"><a href="index.php">RETOUR</a></li>
-            
-            <div class="indicateur"></div>
           </ul>
+
+<!------------------------------------------BOUTON RESERVATIONS ------------------------------------>
+      <div class="reservations"><i class="fa-solid fa-bell-concierge"></i><span class="nbReservation"><?php if(isset($_SESSION['reservations'])){ echo count($_SESSION['reservations']);} else{echo "0";}?></span></div>
+
         </section>
 
         <!-------------------------------------MAIN------------------------------------------->
