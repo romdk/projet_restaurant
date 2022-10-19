@@ -152,6 +152,7 @@ section{
 #top li:nth-child(1).active ~ .indicateur{ 
     transform: translateX(calc(250px * 0));
 }
+
 #top li:nth-child(2).active ~ .indicateur{
     transform: translateX(calc(250px * 1)); 
 }
@@ -168,6 +169,20 @@ section{
 /* ------------------------------------------------ bouton dark  burger -------------------------------------- */
 #top li:nth-child(6).active ~ .indicateur{
     transform: translateX(calc(250px * 5));
+    
+}
+#top li:nth-child(8) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+
+}
+/* ----------------------------------- BOUTON DARKMODE -------------------------- */
+
+.btn-toggle{
+    width: 50px;
+    height: 50px;
+    z-index: 5;
     background:var(--clr-texte3);
     color:var(--clr-texte2);
     display: flex;
@@ -176,15 +191,7 @@ section{
     text-align: center;
     cursor: pointer;
     transition: .4s;
-    
 }
-#top li:nth-child(7) {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 5px;
-
-}
-
 .anim-logo{
     /* transform: translateX(400px); */
     transform: translateY(-45px);
@@ -982,24 +989,6 @@ background-color: var(--clr-accent);
     transform: translateY(-60px );         
 }
 
-/* ----------------------------------- ancien BOUTON DARKMODE-------------------------- */
-
-/*.btn-toggle{
-    position: fixed;
-    top:0px;
-    right: 0px;
-    width: 50px;
-    height: 50px;
-    z-index: 5;
-    background:var(--clr-texte3);
-    color:var(--clr-texte2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    transition: .4s;
-}*/
 
 /* -------------------------RESPONSIVE---------------------------------- */
 @media screen and (max-width: 1650px ){
@@ -1033,11 +1022,11 @@ background-color: var(--clr-accent);
             
         }
 
-        /* ------------------------------------------------------ bouton dark burger ------------------------------------------------- */
+        /* ------------------------------------------------------ bouton dark burger ------------------------------------------------- 
         #top li:nth-child(6).active ~ .indicateur{
             transform: translateX(calc(150px * 5));
-            
-        }
+        
+        }*/
         .video{
             /* height: 100vh; */
         width: auto;
@@ -1103,9 +1092,6 @@ background-color: var(--clr-accent);
     }
     #top li:nth-child(5).active ~ .indicateur{
         transform: translateY(calc(50px * 4));
-    }
-    #top li:nth-child(6).active ~ .indicateur{
-        transform: translateY(calc(50px * 5));
     }
 
 /* -------------------------- burger ------------------------------- */
@@ -1179,7 +1165,7 @@ background-color: var(--clr-accent);
 
         #top .nav{
             position: absolute;
-            height: 260px;
+            height: 300px;
             width: 100%;
             left: 0;
             top: -205px;
@@ -1188,6 +1174,7 @@ background-color: var(--clr-accent);
             padding-top: 20px;
             transition: .4s;
             z-index: -10;
+            overflow: hidden;
             /* transform: translateY(160px); */
         }
         
