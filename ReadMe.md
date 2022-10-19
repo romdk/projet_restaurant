@@ -4,11 +4,11 @@ This project is a website of a fictional Restaurant.
 This is a one page with five sections and an external page.
 
 The website contain the following sections: <br>
--Accueil: this is the homepage of the website, it contain a short looped video displayed in fullscreen showing the restaurant premises.
--Galerie: this is the gallery of the restaurant, it contain 2 carousel, the left one displays pictures of the restaurant premises and the other one display some food.
--Notre Menu: this section is dedicated for the weekly menu, it contain an accordion showing the menu of each day of the week.
--Evenements: this is the events section, it contain upcoming events with a short description.
--Reservation: this section contain a form that allow you to hold a reservation, and an interactive map showing the location of the restaurant.
+-Accueil: this is the homepage of the website, it contain a short looped video displayed in fullscreen showing the restaurant premises.<br>
+-Galerie: this is the gallery of the restaurant, it contain 2 carousel, the left one displays pictures of the restaurant premises and the other one display some food.<br>
+-Notre Menu: this section is dedicated for the weekly menu, it contain an accordion showing the menu of each day of the week.<br>
+-Evenements: this is the events section, it contain upcoming events with a short description.<br>
+-Reservation: this section contain a form that allow you to hold a reservation, and an interactive map showing the location of the restaurant.<br>
 
 The external page displays all your reservations in a table, in which you can change informations if needed but also delete one or all reservations.
 
