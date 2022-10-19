@@ -18,6 +18,7 @@
     align-items: flex-start;
     scroll-snap-align: none;
     height: fit-content;
+    min-height: 100vh;
     padding: 50px;
 }
 
@@ -29,7 +30,7 @@ table {
     
 }
 table th {
-    text-align:left;
+    text-align:center;
     padding:20px 10px;
     background-color: var(--clr-nav);
     color: white;
@@ -107,17 +108,38 @@ table td:nth-child(9){
     padding: 5px;
     width: 150px;
     height: 30px;
+    background-color: rgb(46, 96, 190);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
+    /* transform: translateX(80px); */
+    transition: .4s;
+}
+
+.bouton2:hover{
+    background-color: rgb(25, 63, 134);
+}
+
+.bouton3{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+    height: 30px;
     background-color: rgb(46, 190, 130);
     color: white;
     border-radius: 20px;
     border: none;
     overflow: hidden;
-    transform: translateX(80px);
     transition: .4s;
 }
 
-.bouton2:hover{
-    background-color: rgb(25, 134, 89);
+.bouton3:hover{
+    background-color: rgb(20, 104, 69);
 }
 
 .bouton2 p{

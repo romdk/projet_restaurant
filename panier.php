@@ -53,10 +53,10 @@ session_start() ;
                             "<th>Jour</th>",
                             "<th>Heure</th>",
                             "<th>Créneau</th>",
+                            "<th></th>",
                             "<th>Email</th>",
                             "<th>Message</th>",
                             "<th>Plat du jour</th>",
-                            "<th></th>",
                             "<th>"."<a class='bouton1' href=traitement.php?action=effacerReservations>Effacer reservations</a>"."</th>", 
                           "</tr>",
                         "</thead>",
@@ -79,7 +79,7 @@ session_start() ;
                                 </select>
                          </td>",
                                     "<td>   <select name='heure' id='heure' onchange='toggleCreneaux()'>
-                                    <option id='midi' value='midi' selected='selected'>Midi</option>
+                                    <option id='midi' value='midi' selected='selected'>".$reservation['heure']."</option>
                                     <option id='soir' value='soir'>Soir</option>
                                 </select></td>",
                                     "<td> <select name='creneau' id='H-midi'>
@@ -106,15 +106,15 @@ session_start() ;
                                     <option >22h</option>
                                     
                                 </select></td>",
+                                "<td>"."<input class='bouton3' type='submit' name='modifier' value='Modification' />"."</td>",
                                     "<td>".$reservation['email']."</td>",
                                     "<td>".$reservation['message']."</td>",
+                                    " </form>",
                                     "<td>
                                     
                                     <button class='bouton2'> Afficher menu<p class='plat'>".$_SESSION['platDuJour'][$jour]."</p></button>",
                                     "</td>",
-                                    "<td>"."<input class='bouton1' type='submit' name='modifier' value='Modifification' />"."</td>",
                                     "<td>"."<a href=traitement.php?action=supprimerUneReservation&index=$index><i class='fa-solid fa-xmark'></i></a>"."</td>",
-                                   " </form>",
                                   "</tr>";    
                                 }
                           }
