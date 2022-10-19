@@ -43,6 +43,7 @@
             <li class="evenements"><a href="#evenements">EVENEMENTS</a></li>
             <li class="contact"><a href="#contact">CONTACT</a></li>
             <li class="reservations"><a href="panier.php">RESERVATIONS <span class="nbReservation"><?php echo count($_SESSION['reservations'])?></span></a></li>
+            <li class="btn-toggle"><Go href="#btn-toggle">Go dark</a></li> <!-- bouton dark burger-->
             <div class="indicateur"></div>
           </ul>
           <div class="burger">

@@ -164,7 +164,20 @@ section{
     transform: translateX(calc(250px * 4));
     
 }
-#top li:nth-child(6) {
+/* ------------------------------------------------ bouton dark  burger -------------------------------------- */
+#top li:nth-child(6).active ~ .indicateur{
+    transform: translateX(calc(250px * 5));
+    background:var(--clr-texte3);
+    color:var(--clr-texte2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s;
+    
+}
+#top li:nth-child(7) {
     display: flex;
     justify-content: space-between;
     padding-left: 5px;
@@ -970,7 +983,7 @@ background-color: var(--clr-accent);
 
 /* -----------------------------------BOUTON DARKMODE-------------------------- */
 
-.btn-toggle{
+/*.btn-toggle{
     position: fixed;
     top:0px;
     right: 0px;
@@ -985,7 +998,7 @@ background-color: var(--clr-accent);
     text-align: center;
     cursor: pointer;
     transition: .4s;
-}
+}*/
 
 /* -------------------------RESPONSIVE---------------------------------- */
 @media screen and (max-width: 1650px ){
@@ -1019,6 +1032,11 @@ background-color: var(--clr-accent);
             
         }
 
+        /* ------------------------------------------------------ bouton dark burger ------------------------------------------------- */
+        #top li:nth-child(6).active ~ .indicateur{
+            transform: translateX(calc(150px * 5));
+            
+        }
         .video{
             /* height: 100vh; */
         width: auto;
@@ -1085,7 +1103,11 @@ background-color: var(--clr-accent);
     #top li:nth-child(5).active ~ .indicateur{
         transform: translateY(calc(50px * 4));
     }
+    #top li:nth-child(6).active ~ .indicateur{
+        transform: translateY(calc(50px * 5));
+    }
 
+/* -------------------------- burger ------------------------------- */
     #top .burger {
         position: absolute;
         flex-wrap: wrap;
