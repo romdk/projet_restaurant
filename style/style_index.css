@@ -1016,7 +1016,7 @@ background-color: var(--clr-accent);
         
         #top ul{
             margin-left: auto;
-            margin-right: 50px;
+            margin-right: 200px;
             width: auto;
             gap: 0px;
           
@@ -1085,17 +1085,17 @@ background-color: var(--clr-accent);
         flex-wrap: wrap;
         border-radius: 5px;
         width: 70%;
-        height: 45%;
+        height: 35%;
     }
 
     #contact iframe{
         margin-top: 20px;
-        height: 310px;
+        height: 220px;
     }
 
 }
 
-@media screen and (max-width: 1050px ){
+@media screen and (max-width: 1200px ){
 
     #top li:nth-child(1).active ~ .indicateur{
         transform: translateY(calc(50px * 0));
@@ -1328,6 +1328,12 @@ background-color: var(--clr-accent);
         
 }
 
+@media screen and (max-width: 832px ){
+        /* -----------------------------------------PLAT DU JOUR-------------------------------------------- */
+        .platDroite img{
+            display: none;
+        }
+}
 @media screen and (max-width: 600px ){
     #container{
         scroll-snap-type: none;
@@ -1419,10 +1425,7 @@ background-color: var(--clr-accent);
     #galerie .btnGauche:hover i{
         color: black;
     }
-    /* -----------------------------------------PLAT DU JOUR-------------------------------------------- */
-    .platDroite img{
-        display: none;
-    }
+
 
     /* -----------------------------------------EVENEMENTS---------------------------------------------- */
    
