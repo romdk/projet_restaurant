@@ -9,7 +9,7 @@ function myFunction(card) {
     tableauDetail = card.querySelector('.exEvenement')
     tableauImg = card.querySelector('.concerteImg')
     tableauDetail.classList.toggle("animEvenement");
-    tableauImg.classList.toggle("animConcerteImg");
+    
   })
 
 

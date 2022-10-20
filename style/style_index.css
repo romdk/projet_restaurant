@@ -632,6 +632,9 @@ i {
   /* -------------------------------EVENEMENTS--------------------------------- */
 
   #evenements{ 
+    display:flex ;
+    align-items: center;
+    justify-content: center;
     background-color: var(--clr-dark);
     width: 100vw;
     min-height: fit-content;
@@ -662,15 +665,18 @@ position: relative;
 
 
 .concerteImg{
-    width:450px ;
-    height: 300px;
+    width:500px ;
+    height: 350px;
     border-radius: 10px;
     transition: .4s;
     object-fit: cover;
+    
+    
 }
-.animConcerteImg{
+/* .animConcerteImg{
     border-radius: 10px 10px 0 0;
-}
+   
+} */
 
 
 .evenvement:hover {
@@ -684,7 +690,8 @@ position: relative;
 }
 
 .exEvenement{
-    width: 450px;
+    width: 500px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -700,7 +707,7 @@ position: relative;
 .animEvenement{
     background-color: var(--clr-light);
     border-radius: 0 0 10px 10px;
-    transform: translateY(300px);
+    transform: rotate(360deg) ;
     opacity: 1;
 }
 
