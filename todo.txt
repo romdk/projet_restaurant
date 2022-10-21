@@ -2,8 +2,11 @@ choses à faire(par ordre d'importance)
 
 empecher doublon jour menu deroulant panier
 integrer le bouton darkmode dans le menu burger au format mobile
-revoir responsive au niveau de la navbar
 rendre page reservations responsive
 
-redimensionner images dans l'accordeon du menu de la semaine (dans un editeur d'images)
+affichage message reservations, modifier, supprimer etc...
+
+
+redimensionner images dans l'accordeon du menu de la semaine (dans un edite
+ur d'images)
 styliser les menu deroulants
