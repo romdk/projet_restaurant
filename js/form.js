@@ -37,26 +37,26 @@ function toggleCreneaux(){
 }
 
 
-var i =0;
-const jour = ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"]
-function ajouterOption(){
-    console.log(tableauJourReserv);
+// var i =0;
+// const jour = ["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"]
+// function ajouterOption(){
+//     console.log(tableauJourReserv);
 
-    tableauJourReserv.forEach(() => {
-            jour.forEach(() => {
-                if(jour !== 0 ){
-                    console.log(test);
-                        var jourElem = document.createElement('option');
-                        jourElem.setAttribute("value", jour);
-                        selectJour[0].appendChild(jourElem);
-                }
-                else{
-                        selectJour.append("<option selected='selected'>"+jour+"</option>")
-                }                
-            });
-            i++;
-    })
-};
+//     tableauJourReserv.forEach(() => {
+//             jour.forEach(() => {
+//                 if(jour !== 0 ){
+//                     console.log(test);
+//                         var jourElem = document.createElement('option');
+//                         jourElem.setAttribute("value", jour);
+//                         selectJour[0].appendChild(jourElem);
+//                 }
+//                 else{
+//                         selectJour.append("<option selected='selected'>"+jour+"</option>")
+//                 }                
+//             });
+//             i++;
+//     })
+// };
 
 
 
