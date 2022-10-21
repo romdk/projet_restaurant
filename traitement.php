@@ -44,13 +44,10 @@ switch($action) {
 
     case"modifierReservation";
     if(isset($_POST['modifier'])){
-        $creneau=$_POST["creneau"];
-        $heure=$_POST["heure"]; 
-        $jour=$_POST["jour"]; 
         
-        // $creneau =filter_input(INPUT_POST,"creneau",FILTER_SANITIZE_SPECIAL_CHARS);
-        // $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_SPECIAL_CHARS);
-        // $heure =filter_input(INPUT_POST,"heure",FILTER_SANITIZE_SPECIAL_CHARS);
+        $creneau =filter_input(INPUT_POST,"creneau",FILTER_SANITIZE_SPECIAL_CHARS);
+        $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_SPECIAL_CHARS);
+        $heure =filter_input(INPUT_POST,"heure",FILTER_SANITIZE_SPECIAL_CHARS);
         
         
         if($jour && $heure && $creneau){
