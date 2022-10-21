@@ -1,7 +1,9 @@
 const container = document.querySelector("#container");
 const sections = document.querySelectorAll("section");
-const navigation = document.querySelector("#top ul");
 const liste = document.querySelectorAll("#top li");
+
+
+const navigation = document.querySelector("#top ul");
 const logo = document.querySelector("#top img");
 const down = document.querySelector("#accueil .down");
 const fleche = document.querySelector(".back-to-top");
