@@ -35,7 +35,7 @@ function findAllReservations($pdo){
 
 // ----------------AFFICHER ELEMENT POSSEDANT ID SPECIFIQUE ---------------------
 function findMenuById($pdo,$id){
-    $sqlQuery = $pdo->prepare("SELECT * FROM menu WHERE id = :id");
+    $sqlQuery = $pdo->prepare("SELECT * FROM menu WHERE id_menu = :id");
     $sqlQuery->bindValue(":id", $id);
     $sqlQuery->execute();
     global $menu;
@@ -44,13 +44,22 @@ function findMenuById($pdo,$id){
 // findMenuById($pdo,$id=2);
 
 function findReservationById($pdo,$id){
-    $sqlQuery = $pdo->prepare("SELECT * FROM reservation WHERE id = :id");
+    $sqlQuery = $pdo->prepare("SELECT * FROM reservation WHERE id_reservation = :id");
     $sqlQuery->bindValue(":id", $id);
     $sqlQuery->execute();
     global $reservation;
     $reservation = $sqlQuery->fetch();      
 }
 // findReservationById($pdo,$id=2);
+
+function findJourById($pdo,$id){
+    $sqlQuery = $pdo->prepare("SELECT * FROM jour WHERE id_jour = :id");
+    $sqlQuery->bindValue(":id", $id);
+    $sqlQuery->execute();
+    global $jour;
+    $jour = $sqlQuery->fetch();      
+}
+// findJourById($pdo,$id=2);
 
 
 
