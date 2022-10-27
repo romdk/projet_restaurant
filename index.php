@@ -1,5 +1,7 @@
 <?php
+  include 'db_fonctions.php';
   session_start();
+  connection();
 
   $plat1 = "Escalope de poisson pané avec ses pommes de terre sauté";
   $plat2 = "Quiche de saison accompagnée de sa salade";
@@ -127,7 +129,7 @@
               <label class="box-title" for="cb1">Lundi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-                <p><?php echo $plat1 ?></p>
+                <p><?php findMenuById($pdo,$id=1); echo $menu['nom'] ?></p>
                 <img
                   src="./images/platDuJourFish.png"
                   alt="Une assiette d'escalope de poisson pané avec ses pommes de terre sauté. Ainsi que ses lardons et ces compos de ciboulette accompagnée d'une sauce ketchup."
@@ -139,7 +141,7 @@
               <label class="box-title" for="cb2">Mardi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-              <p><?php echo $plat2 ?></p>
+              <p><?php findMenuById($pdo,$id=2); echo $menu['nom'] ?></p>
                 <img
                   src="./images/platDuJourQuiche.png"
                   alt="Photo d'une quiche de saison sur son assiette blanche"
@@ -151,7 +153,7 @@
               <label class="box-title" for="cb3">Mercredi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-              <p><?php echo $plat3 ?></p>
+              <p><?php findMenuById($pdo,$id=3); echo $menu['nom'] ?></p>
                 <img
                   src="./images/platDuJourBolo.png"
                   alt="Assiette de spaghetti bolognaise"
@@ -163,7 +165,7 @@
               <label class="box-title" for="cb4">Jeudi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-              <p><?php echo $plat4 ?></p>
+              <p><?php findMenuById($pdo,$id=4); echo $menu['nom'] ?></p>
                 <img
                   src="./images/platDuJourPizza.png"
                   alt="Pizza sur sa plache de bois"
@@ -175,7 +177,7 @@
               <label class="box-title" for="cb5">Vendredi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-              <p><?php echo $plat5 ?></p>
+              <p><?php findMenuById($pdo,$id=5); echo $menu['nom'] ?></p>
                 <img
                   src="./images/PlatDuJourRissoto.png"
                   alt="Assiette de rissoto"
@@ -187,7 +189,7 @@
               <label class="box-title" for="cb6">Samedi</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-              <p><?php echo $plat6 ?></p>
+              <p><?php findMenuById($pdo,$id=6); echo $menu['nom'] ?></p>
                 <img
                   src="./images/platDuJourGrillade.jpg"
                   alt="Grillade de viande au barbecue"
@@ -199,7 +201,7 @@
               <label class="box-title" for="cb7">Dimanche</label>
               <label class="box-close" for="acc-close"></label>
               <div class="box-content">
-              <p><?php echo $plat7 ?></p>
+              <p><?php findMenuById($pdo,$id=7); echo $menu['nom'] ?></p>
                 <img
                   src="./images/platDuJourPoulet.png"
                   alt="Poulet rôti à la broche et ses accompagnements"
