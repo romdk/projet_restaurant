@@ -27,7 +27,6 @@ session_start() ;
         <section id="top">
           <div class="retour"><a class='bouton1' href="index.php">RETOUR</a></div>            
           <div class="logo"><img src="./images/logo_2.png" alt="" /></div>
-          </ul>
 
 <!------------------------------------------BOUTON RESERVATIONS ------------------------------------>
       <div class="reservations"><i class="fa-solid fa-bell-concierge"></i><span class="nbReservation"><?php if(isset($_SESSION['reservations'])){ echo count($_SESSION['reservations']);} else{echo "0";}?></span></div>
