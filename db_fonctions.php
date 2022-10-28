@@ -70,9 +70,9 @@ function findJourById($pdo,$id){
         $sqlQuery->execute();
     }
     // insertMenu($pdo,$nom="abricot",$description="un lot de 4 abricots");
-    function insertReservation($pdo,$nomPrenom,$nbPersonne,$jour,$email,$message){
-        $sqlQuery = $pdo->prepare("INSERT INTO reservation (nom_et_prenom,nb_personnes,email,message)
-                                    VALUES ('$nomPrenom', '$nbPersonne','$jour','$email','$message')");
+    function insertReservation($pdo,$nomPrenom,$nbPersonne,$jour,$heure,$creneau,$email,$message){
+        $sqlQuery = $pdo->prepare("INSERT INTO reservation (nom_prenom,nbpersonnes,id_jour,heure,creneau,email,message)
+                                    VALUES ('$nomPrenom', '$nbPersonne','$jour','$heure','$creneau','$email','$message')");
         $sqlQuery->execute();
     }
     // insertReservation($pdo,$nom="abricot",$description="un lot de 4 abricots");
