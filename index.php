@@ -124,91 +124,21 @@
                 ></a>
               </div>
             </header>
-            <input type="radio" name="accordion" id="cb1" />
-            <div class="box">
-              <label class="box-title" for="cb1">Lundi</label>
-              <label class="box-close" for="acc-close"></label>
-              <div class="box-content">
-                <p><?php findMenuById($pdo,$id=1); echo $menu['nom'] ?></p>
-                <img
-                  src="./images/platDuJourFish.png"
-                  alt="Une assiette d'escalope de poisson pané avec ses pommes de terre sauté. Ainsi que ses lardons et ces compos de ciboulette accompagnée d'une sauce ketchup."
-                />
-              </div>
-            </div>
-            <input type="radio" name="accordion" id="cb2" />
-            <div class="box">
-              <label class="box-title" for="cb2">Mardi</label>
-              <label class="box-close" for="acc-close"></label>
-              <div class="box-content">
-              <p><?php findMenuById($pdo,$id=2); echo $menu['nom'] ?></p>
-                <img
-                  src="./images/platDuJourQuiche.png"
-                  alt="Photo d'une quiche de saison sur son assiette blanche"
-                />
-              </div>
-            </div>
-            <input type="radio" name="accordion" id="cb3" />
-            <div class="box">
-              <label class="box-title" for="cb3">Mercredi</label>
-              <label class="box-close" for="acc-close"></label>
-              <div class="box-content">
-              <p><?php findMenuById($pdo,$id=3); echo $menu['nom'] ?></p>
-                <img
-                  src="./images/platDuJourBolo.png"
-                  alt="Assiette de spaghetti bolognaise"
-                />
-              </div>
-            </div>
-            <input type="radio" name="accordion" id="cb4" />
-            <div class="box">
-              <label class="box-title" for="cb4">Jeudi</label>
-              <label class="box-close" for="acc-close"></label>
-              <div class="box-content">
-              <p><?php findMenuById($pdo,$id=4); echo $menu['nom'] ?></p>
-                <img
-                  src="./images/platDuJourPizza.png"
-                  alt="Pizza sur sa plache de bois"
-                />
-              </div>
-            </div>
-            <input type="radio" name="accordion" id="cb5" />
-            <div class="box">
-              <label class="box-title" for="cb5">Vendredi</label>
-              <label class="box-close" for="acc-close"></label>
-              <div class="box-content">
-              <p><?php findMenuById($pdo,$id=5); echo $menu['nom'] ?></p>
-                <img
-                  src="./images/PlatDuJourRissoto.png"
-                  alt="Assiette de rissoto"
-                />
-              </div>
-            </div>
-            <input type="radio" name="accordion" id="cb6" />
-            <div class="box">
-              <label class="box-title" for="cb6">Samedi</label>
-              <label class="box-close" for="acc-close"></label>
-              <div class="box-content">
-              <p><?php findMenuById($pdo,$id=6); echo $menu['nom'] ?></p>
-                <img
-                  src="./images/platDuJourGrillade.jpg"
-                  alt="Grillade de viande au barbecue"
-                />
-              </div>
-            </div>
-            <input type="radio" name="accordion" id="cb7" />
-            <div class="box">
-              <label class="box-title" for="cb7">Dimanche</label>
-              <label class="box-close" for="acc-close"></label>
-              <div class="box-content">
-              <p><?php findMenuById($pdo,$id=7); echo $menu['nom'] ?></p>
-                <img
-                  src="./images/platDuJourPoulet.png"
-                  alt="Poulet rôti à la broche et ses accompagnements"
-                />
-              </div>
-            </div>
+            
 
+            <?php
+            $jours = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+            for($i=1;$i<=7;$i++) { ?>
+              <input type="radio" name="accordion" id="cb<?= $i ?>" />
+              <div class="box">
+                <label class="box-title" for="cb<?= $i ?>"><?= $jours[$i-1] ?></label>
+                <label class="box-close" for="acc-close"></label>
+                <div class="box-content">
+                  <p><?php findMenuById($pdo,$i); echo $menu['nom'] ?></p>
+                  <img class = "imageMenu"src="./images/<?php echo $menu['image'] ?>" alt="" />
+                </div>
+              </div>
+            <?php } ?>
             <input type="radio" name="accordion" id="acc-close" />
           </nav>
         </div>
