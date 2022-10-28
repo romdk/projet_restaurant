@@ -1,0 +1,16 @@
+@import url("style_panier.css");
+
+.adminForm{
+    transform: translateY(100px);
+}
+
+.row{
+    display: flex;
+    margin-left: 20px;
+    padding: 10px;
+    align-items: center;
+    height: 50px;
+    width: 500px;
+    background-color: red;
+    border-bottom: solid black 1px;
+}
