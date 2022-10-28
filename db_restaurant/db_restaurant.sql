@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   CONSTRAINT `FK_menu_jour` FOREIGN KEY (`id_jour`) REFERENCES `jour` (`id_jour`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
--- Listage des données de la table db_restaurant.menu : ~8 rows (environ)
+-- Listage des données de la table db_restaurant.menu : ~9 rows (environ)
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`id_menu`, `id_jour`, `image`, `nom`, `description`) VALUES
 	(1, 1, 'platDuJourFish.png', 'Escalope de poisson', 'Escalope de poisson pané avec ses pommes de terre sauté'),
@@ -69,13 +69,17 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `nbPersonnes` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
   `message` text,
+  `heure` varchar(50) NOT NULL,
+  `creneau` varchar(50) NOT NULL,
   PRIMARY KEY (`id_reservation`),
   KEY `id_jour` (`id_jour`),
   CONSTRAINT `FK_reservation_jour` FOREIGN KEY (`id_jour`) REFERENCES `jour` (`id_jour`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- Listage des données de la table db_restaurant.reservation : ~0 rows (environ)
 /*!40000 ALTER TABLE `reservation` DISABLE KEYS */;
+INSERT INTO `reservation` (`id_reservation`, `id_jour`, `nom_prenom`, `nbPersonnes`, `email`, `message`, `heure`, `creneau`) VALUES
+	(1, 1, 'john doe', 2, 'test@test.fr', 'c&#39;est un test', 'midi', '13h15');
 /*!40000 ALTER TABLE `reservation` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
