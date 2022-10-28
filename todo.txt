@@ -1,4 +1,8 @@
 choses à faire(par ordre d'importance)
+inserer nouvelle reservation dans la bdd quand on envoi le formulaire de reservation
+afficher les reservation de la bdd dans la page reservations
+supprimer reservation de la bdd quand on fait supprimer dans la page reservations
+modifier reservation de la bdd quand on modifie une information dans la page reservations
 
 empecher doublon jour menu deroulant panier
 integrer le bouton darkmode dans le menu burger au format mobile
