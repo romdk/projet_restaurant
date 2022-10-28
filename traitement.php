@@ -15,8 +15,9 @@ switch($action) {
     
     if(isset($_POST['envoyer'])){
         $creneau =filter_input(INPUT_POST,"creneau",FILTER_SANITIZE_SPECIAL_CHARS);
-        $name =filter_input(INPUT_POST,"name",FILTER_SANITIZE_SPECIAL_CHARS);
-        $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_SPECIAL_CHARS);
+        $nomPrenom =filter_input(INPUT_POST,"name",FILTER_SANITIZE_SPECIAL_CHARS);
+        // $jour =filter_input(INPUT_POST,"jour",FILTER_SANITIZE_SPECIAL_CHARS);
+        $jour = 1;
         $heure =filter_input(INPUT_POST,"heure",FILTER_SANITIZE_SPECIAL_CHARS);
         $nbPersonne =filter_input(INPUT_POST,"nbPersonne",FILTER_VALIDATE_INT);
         $message =filter_input(INPUT_POST,"message",FILTER_SANITIZE_SPECIAL_CHARS);
@@ -24,19 +25,21 @@ switch($action) {
 
     
 
-        if($name && $nbPersonne && $jour && $heure && $creneau && $email ){
-            $reservation =[
-                "name" => $name ,
-                "nbPersonne"=>$nbPersonne ,
-                "jour"=>$jour,
-                "heure"=>$heure,
-                "creneau"=>$creneau,
-                "email"=>$email,
-                "message"=>$message ];
+        if($nomPrenom && $nbPersonne && $jour && $heure && $creneau && $email ){
+            // $reservation =[
+            //     "name" => $nomPrenom ,
+            //     "nbPersonne"=>$nbPersonne ,
+            //     "jour"=>$jour,
+            //     "heure"=>$heure,
+            //     "creneau"=>$creneau,
+            //     "email"=>$email,
+            //     "message"=>$message ];
 
-        $_SESSION['reservations'][]=$reservation;
-        }
+        // $_SESSION['reservations'][]=$reservation;
+
+        insertReservation($pdo,$nomPrenom,$nbPersonne,$jour,$heure,$creneau,$email,$message);
         header("Location:index.php#contact");
+        }
         
 
 
