@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style_panier.css"/>
+    <link rel="stylesheet" href="./style/style_admin.css"/>
     <title>admin</title>
 </head>
 <body>
@@ -16,22 +16,37 @@
     <?php 
         include 'db_fonctions.php';
         connection();
-        /*
-         findAllMenus($pdo);
 
-        foreach($menus as $menu){              
+?>
+        <form class="adminForm" action="traitement.php?action=creerMenu" method="post">
+        <div class="row">
+            <label>
+                Nom du plat :
+                <input type="text" name="nom">
+            </label>
+        </div>
+        <div class="row">
+             <label>
+                Description du plat :
+                <textarea type="text" name="description"></textarea>
+             </label>
+        </div>
+        <div class="row">
+            <label for="file" class="form-label">
+                Image :
+                <input type="file" name="image">    
+            </label>
+        </div>
+        <div class="row">
+            <input type="submit" name="submit" value="Ajouter le plat" >
+        </div>
+    </form>
 
-        ?><p style ="transform: translateY(100px);">
-                <?php echo $menu['nom']?><br>
-                <?php echo $menu['description']?><br><br>
-            </p><?php 
-            
-        }  
+<?php
+findMenuById($pdo,$id=11);
+echo $menu['nom'], $menu['description'], $menu['image'];
 
-        findMenuById($pdo,$id=3);
-        ?> <p style ="transform: translateY(100px) translateX(20px);"> <?php echo $menu['nom']?> </p>
-        */
-    ?>
+?>
 </section>
     
 </body>
