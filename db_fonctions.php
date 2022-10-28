@@ -5,7 +5,7 @@
 function connection(){
     global $pdo;
     $pdo = new PDO(
-        'mysql:host=127.0.0.1;dbname=restaurant;charset=utf8',
+        'mysql:host=127.0.0.1;dbname=db_restaurant;charset=utf8',
         'root',
         '',
         [\PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
@@ -64,9 +64,9 @@ function findJourById($pdo,$id){
 
 
 // ----------------INSERER ELEMENT DANS DB ---------------------
-    function insertMenu($pdo,$nom,$description){
-        $sqlQuery = $pdo->prepare("INSERT INTO menu (nom, description)
-                                    VALUES ('$nom', '$description')");
+    function insertMenu($pdo,$nom,$description,$image){
+        $sqlQuery = $pdo->prepare("INSERT INTO menu (nom, description,image)
+                                    VALUES ('$nom', '$description','$image')");
         $sqlQuery->execute();
     }
     // insertMenu($pdo,$nom="abricot",$description="un lot de 4 abricots");
