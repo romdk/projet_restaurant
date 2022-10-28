@@ -1,6 +1,8 @@
 <?php
 
+include 'db_fonctions.php';
 session_start() ;
+connection();
 $action = $_GET["action"];
 $id = $_GET["id"];
 $index = (isset($_GET["index"])) ? $_GET["index"] : "";
@@ -92,5 +94,17 @@ switch($action) {
             unset($_SESSION['reservations'][$id]);
         }
         header("Location:panier.php");
+    break;
+
+    case "creerMenu";
+    if(isset($_POST['submit'])){
+            
+        $nom = filter_input(INPUT_POST, "nom", FILTER_SANITIZE_SPECIAL_CHARS);
+        $description = filter_input(INPUT_POST, "description", FILTER_SANITIZE_SPECIAL_CHARS);
+        $image = filter_input(INPUT_POST, "image", FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+        
+        insertMenu($pdo,$nom,$description,$image);
+        header("Location:admin.php");
     break;
 }
