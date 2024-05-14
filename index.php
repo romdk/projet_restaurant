@@ -325,6 +325,7 @@
           <a href=""><i class="fa-brands fa-facebook-f"></i></a>
           <a href=""><i class="fa-brands fa-instagram"></i></a>
         </div>
+        <div class="ProtectionLegal"> &copy; 2024 tout droit réserver</div>
       </footer>
     </div>
     <!--------------------------------- JS -------------------------------->

@@ -66,6 +66,16 @@ body{
     scroll-snap-type: y mandatory;
 }
 
+.ProtectionLegal{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    /*border: 2px solid red;*/
+}
+
 section{
     height: 100vh;
     /* centre la section sur la fenetre quand on scroll */
